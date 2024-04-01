@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Footer from "../footer";
-import Header from "../header";
+import Footer from "./footer";
+import Header from "./header";
 
 export default function Home() {
   return (
@@ -16,11 +16,11 @@ export default function Home() {
             <p className="m-3 font-light">
               Jeune passionné de 22 ans, je suis passionné d&apos;informatique,
               particulièrement dans les systèmes et réseaux. Adepte de rugby et
-              de musculation, je trouve un équilibre entre l&apos;effort physique et
-              mental.
+              de musculation, je trouve un équilibre entre l&apos;effort
+              physique et mental.
               <span className="underline">
-                Actuellement à la recherche d&apos;un stage de deux mois minimum à
-                partir du 10 juin en systèmes et réseaux
+                Actuellement à la recherche d&apos;un stage de deux mois minimum
+                à partir du 10 juin en systèmes et réseaux
               </span>
               , je suis motivé pour contribuer à des projets innovants et
               enrichir mes compétences.
