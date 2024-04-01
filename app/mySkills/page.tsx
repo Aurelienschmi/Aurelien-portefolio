@@ -30,7 +30,7 @@ export default function Home() {
             <p className="text-center break-auto p-10 w-1/3">
               Certifié CCNAv7 et en cours de préparation pour les certifications
               CCNA et CSNA, je possède une solide expertise en réseautique. Ma
-              formation m&aposa permis de maîtriser les principes fondamentaux des
+              formation m&apos;a permis de maîtriser les principes fondamentaux des
               réseaux informatiques et de développer des compétences pratiques
               en configuration, gestion et dépannage.
             </p>
@@ -55,8 +55,8 @@ export default function Home() {
               tels que le C, Java, Python, HTML, CSS et JavaScript, je possède
               une polyvalence solide en développement logiciel. Ayant travaillé
               sur une variété de projets, de la programmation système avec C à
-              la création d&aposapplications web dynamiques avec JavaScript, je suis
-              à l&aposaise dans des environnements variés.
+              la création d&apos;applications web dynamiques avec JavaScript, je suis
+              à l&apos;aise dans des environnements variés.
             </p>
           </div>
         </div>
@@ -76,8 +76,8 @@ export default function Home() {
               Conception et Gestion de Données Efficace
             </h3>
             <p className="text-center break-all p-10 w-1/3">
-              Je suis compétent dans la création, la gestion et l&aposutilisation de
-              bases de données, ainsi que dans l&aposécriture de requêtes SQL. Ma
+              Je suis compétent dans la création, la gestion et l&apos;utilisation de
+              bases de données, ainsi que dans l&apos;écriture de requêtes SQL. Ma
               capacité à concevoir des schémas de base de données efficaces et à
               écrire des requêtes complexes me permet de développer des
               solutions robustes pour répondre aux besoins métier.
