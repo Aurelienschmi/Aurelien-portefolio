@@ -6,12 +6,12 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="bg-gray-200 border-4 border-t-black text-black">
-      <div className="flex flex-row justify-center items-center m-4">
-        <div className="flex flex-row m-9">
+      <div className="sm:flex flex-row justify-center items-center m-4">
+        <div className="flex flex-row justify-center m-9">
           <a
             href="https://github.com/Aurelienschmi"
             target="_blank"
-            className="m-4"
+            className="sm:m-4 m-2"
           >
             <svg width="80px" height="80px" viewBox="0 0 100 100">
               <path
@@ -21,7 +21,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            className="m-4"
+            className="sm:m-4 m-2"
             href="https://www.linkedin.com/in/aurelien-schmieder-0017391ab"
             target="_blank"
           >
@@ -30,7 +30,7 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-        <div>
+        <div className="flex flex-col items-center break-words">
           <h2 className="underline">Contactez moi:</h2>
           <a
             className="font-bold text-xl"
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="m-4 p-6 -mt-10 flex justify-center items-center w-9 h-9 border-2 border-solid border-black bg-gray-200	 mx-auto rounded-full cursor-pointer hover:border-dashed"
+        className="m-4 p-6 sm:-mt-10 flex justify-center items-center w-9 h-9 border-2 border-solid border-black bg-gray-200	 mx-auto rounded-full cursor-pointer hover:border-dashed"
         onClick={() => window.scrollTo(0, 0)}
       >
         <button>
