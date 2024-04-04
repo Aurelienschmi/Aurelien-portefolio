@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-r from-black to-gray-500 text-white">
       <Header />
-      <main className="flex items-center justify-center bg-gradient-to-r from-black to-gray-500 font-medium text-white h-screen ">
-        <div className="flex flex-col  flex justify-between	flex items-baseline -mt-20 w-1/4">
+      <main className="sm:flex items-center sm:justify-center flex flex-col-reverse flex-col bg-gradient-to-r from-black to-gray-500 font-medium text-white sm:h-screen h-auto">
+        <div className="flex-col flex justify-between	flex items-baseline sm:-mt-20 sm:w-1/3 w-11/12">
           <div className="">
             <h2 className="m-3 text-2xl text-gray-300">Salut! Je suis</h2>
             <h1 className="m-3 text-4xl capitalize font-bold">
@@ -36,7 +36,7 @@ export default function Home() {
             </button>
           </a>
         </div>
-        <div className="m-10 -mt-20 rounded-lg border-4 border-white border-opacity-50">
+        <div className="m-10 sm:-mt-20 rounded-lg border-4 border-white border-opacity-50">
           <Image
             src="/images/profile.jpg"
             alt="Picture of the author"
