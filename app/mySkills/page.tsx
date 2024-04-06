@@ -17,7 +17,7 @@ export default function Home() {
           <div
             className="absolute inset-0 bg-fixed bg-no-repeat bg-cover border-b-4 border-t-4 border-white"
             style={{
-              backgroundImage: "url(/images/background_network.jpg)",
+              backgroundImage: "url(/images/background_network.webp)",
               opacity: 0.4,
             }}
           />
@@ -44,7 +44,7 @@ export default function Home() {
           <div
             className="absolute inset-0 bg-fixed bg-no-repeat bg-cover border-b-4 border-white"
             style={{
-              backgroundImage: "url(/images/background_developpement.jpg)",
+              backgroundImage: "url(/images/background_developpement.webp)",
               opacity: 0.4,
             }}
           />
@@ -69,7 +69,7 @@ export default function Home() {
           <div
             className="absolute inset-0 bg-fixed bg-no-repeat bg-cover border-white"
             style={{
-              backgroundImage: "url(/images/background_data.jpg)",
+              backgroundImage: "url(/images/background_data.webp)",
               opacity: 0.4,
             }}
           />

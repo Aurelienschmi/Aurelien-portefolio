@@ -41,7 +41,7 @@ export default function Home() {
         </div>
         <div className="m-10 sm:-mt-20 rounded-lg border-4 border-white border-opacity-50">
           <Image
-            src="/images/profile.jpg"
+            src="/images/profile.webp"
             alt="Picture of the author"
             width={300}
             height={300}
