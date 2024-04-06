@@ -2,24 +2,24 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header className="sm:flex-row sm:justify-ceter sm:justify-center sm:flex-wrap sm:flex items-center flex flex-col">
+    <header className="flex-row justify-center flex-wrap flex items-center sm:text-xl text-sm">
       <a
         href="/"
-        className="sm:p-2 sm:m-8 border-b-2 border-transparent sm:hover:border-white m-2 p-1 "
+        className="sm:p-2 sm:m-8 sm:border-b-2 sm:border-r-0 sm:border-transparent sm:hover:border-white m-0 p-2"
       >
-        À propos de moi
+        Profil
       </a>
       <a
         href="/mySkills"
-        className="sm:p-2 sm:m-8 border-b-2 border-transparent sm:hover:border-white m-2 p-1 "
+        className="sm:p-2 sm:m-8 sm:border-b-2 sm:border-r-0 sm:border-transparent sm:hover:border-white m-0 p-2"
       >
-        Mes compétences
+        Compétences
       </a>
       <a
         href="/contactMe"
-        className="sm:p-2 sm:m-8 border-b-2 border-transparent sm:hover:border-white m-2 p-1 "
+        className="sm:p-2 sm:m-8 sm:border-b-2 sm:border-r-0 sm:border-transparent sm:hover:border-white m-0 p-2"
       >
-        Contactez moi
+        Contact
       </a>
     </header>
   );
