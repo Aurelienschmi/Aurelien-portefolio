@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="flex flex-col items-center break-words">
           <h2 className="underline">Contactez moi:</h2>
           <a
-            className="font-bold text-xl"
+            className="font-bold sm:text-xl"
             href="mailto:schmieder.aurelien@gmail.com"
           >
             schmieder.aurelien@gmail.com
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="m-4 p-6 sm:-mt-10 flex justify-center items-center w-9 h-9 border-2 border-solid border-black bg-gray-200	 mx-auto rounded-full cursor-pointer hover:border-dashed"
+        className="m-4 p-6 sm:-mt-10 flex justify-center items-center w-9 h-9 border-2 border-solid border-black bg-gray-200 mx-auto rounded-full cursor-pointer sm:hover:border-dashed"
         onClick={() => window.scrollTo(0, 0)}
       >
         <button>
