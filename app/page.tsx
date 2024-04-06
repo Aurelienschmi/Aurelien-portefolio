@@ -9,9 +9,9 @@ export default function Home() {
       <main className="sm:flex items-center sm:justify-center sm:flex-row flex flex-col-reverse bg-gradient-to-r from-black to-gray-500 font-medium text-white sm:h-screen h-auto">
         <div className="flex-col flex justify-between	flex items-baseline sm:-mt-20 sm:w-1/3 w-11/12">
           <div className="">
-            <h2 className="m-3 sm:text-2xl text-lg text-gray-300">
+            <p className="m-3 sm:text-2xl text-lg text-gray-300">
               Salut! Je suis
-            </h2>
+            </p>
             <h1 className="m-3 sm:text-4xl text-2xl capitalize font-bold">
               Aurélien Schmieder, étudiant à Enigma, Lille
             </h1>

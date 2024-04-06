@@ -35,7 +35,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="flex flex-col items-center break-words">
-          <h2 className="underline">Contactez moi:</h2>
+          <h3 className="underline">Contactez moi:</h3>
           <a
             className="font-bold sm:text-xl"
             href="mailto:schmieder.aurelien@gmail.com"

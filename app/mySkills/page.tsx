@@ -22,12 +22,12 @@ export default function Home() {
             }}
           />
           <div className="relative flex flex-col items-center py-10 text-white ">
-            <h2 className="p-4 border-b-2 border-white">Systèmes et réseaux</h2>
+            <h3 className="p-4 border-b-2 border-white">Systèmes et réseaux</h3>
             <div className="relative flex flex-col items-center">
-              <h3 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl xl:w-1/3 w-auto">
+              <h4 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl xl:w-1/3 w-auto">
                 Expertise en Réseautique : Certifications CCNAV007, CCNA et CSNA
                 en Cours
-              </h3>
+              </h4>
 
               <p className="text-center break-auto xl:w-1/3 w-auto sm:p-10 p-2 mb-9">
                 Certifié CCNAv7 et en cours de préparation pour les
@@ -49,11 +49,11 @@ export default function Home() {
             }}
           />
           <div className="relative flex flex-col items-center py-10 text-white ">
-            <h2 className="p-4 border-b-2 border-white">Développement</h2>
-            <h3 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl xl:w-1/3 w-auto">
+            <h3 className="p-4 border-b-2 border-white">Développement</h3>
+            <h4 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl xl:w-1/3 w-auto">
               Polyvalence en Développement : Maîtrise des Langages C, Java,
               Python, HTML, CSS et JavaScript
-            </h3>
+            </h4>
             <p className="text-center break-auto xl:w-1/3 w-auto sm:p-10 p-2 mb-9">
               Avec une expérience diversifiée dans les langages de programmation
               tels que le C, Java, Python, HTML, CSS et JavaScript, je possède
@@ -74,11 +74,11 @@ export default function Home() {
             }}
           />
           <div className="relative flex flex-col items-center py-10 text-white ">
-            <h2 className="p-4 border-b-2 border-white">Systèmes et réseaux</h2>
-            <h3 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl xl:w-1/3 w-auto">
+            <h3 className="p-4 border-b-2 border-white">Systèmes et réseaux</h3>
+            <h4 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl xl:w-1/3 w-auto">
               Maîtrise de la Modélisation de Bases de Données et de SQL :
               Conception et Gestion de Données Efficace
-            </h3>
+            </h4>
             <p className="text-center break-auto xl:w-1/3 w-auto sm:p-10 p-2 mb-9">
               Je suis compétent dans la création, la gestion et
               l&apos;utilisation de bases de données, ainsi que dans
