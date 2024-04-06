@@ -32,7 +32,7 @@ export default function Home() {
           <a href="../images/CV.pdf" target="_blank" aria-label="CV">
             <button
               className="flex flex-col p-3 m-5 text-white rounded-full border-2 border-white hover:border-transparent font-bold uppercase"
-              title="Téléchargé mon CV ici !"
+              title="Téléchargez mon CV !"
               aria-label="Download CV"
             >
               Télécharger CV
