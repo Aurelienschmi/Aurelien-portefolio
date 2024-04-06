@@ -12,31 +12,35 @@ export default function Home() {
       <div className="bg-black bg-opacity-90 text-white ">
         <Header />
       </div>
-      <main className="sm:flex-col justify-center font-medium text-white h-auto">
-        <div className="relative bg-black sm:h-4/6">
+      <main className="sm:flex-col justify-center font-medium text-white ">
+        <div className="relative bg-black">
           <div
-            className="absolute inset-0 bg-fixed bg-no-repeat bg-cover border-b-4 border-t-4 border-white "
+            className="absolute inset-0 bg-fixed bg-no-repeat bg-cover border-b-4 border-t-4 border-white"
             style={{
               backgroundImage: "url(/images/background_network.jpg)",
               opacity: 0.4,
             }}
           />
-          <div className="relative flex flex-col items-center py-10 text-white">
+          <div className="relative flex flex-col items-center py-10 text-white ">
             <h2 className="p-4 border-b-2 border-white">Systèmes et réseaux</h2>
-            <h3 className="p-10 pb-0 text-3xl sm:w-1/3 w-auto">
-              Expertise en Réseautique : Certifications CCNAV007, CCNA et CSNA
-              en Cours
-            </h3>
-            <p className="text-center break-auto sm:w-1/3 w-auto">
-              Certifié CCNAv7 et en cours de préparation pour les certifications
-              CCNA et CSNA, je possède une solide expertise en réseautique. Ma
-              formation m&apos;a permis de maîtriser les principes fondamentaux
-              des réseaux informatiques et de développer des compétences
-              pratiques en configuration, gestion et dépannage.
-            </p>
+            <div className="relative flex flex-col items-center">
+              <h3 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl lg:w-1/3 w-auto">
+                Expertise en Réseautique : Certifications CCNAV007, CCNA et CSNA
+                en Cours
+              </h3>
+
+              <p className="text-center break-auto lg:w-1/3 w-auto sm:p-10 p-2 mb-9">
+                Certifié CCNAv7 et en cours de préparation pour les
+                certifications CCNA et CSNA, je possède une solide expertise en
+                réseautique. Ma formation m&apos;a permis de maîtriser les
+                principes fondamentaux des réseaux informatiques et de
+                développer des compétences pratiques en configuration, gestion
+                et dépannage.
+              </p>
+            </div>
           </div>
         </div>
-        <div className="relative bg-black h-4/6">
+        <div className="relative bg-black ">
           <div
             className="absolute inset-0 bg-fixed bg-no-repeat bg-cover border-b-4 border-white"
             style={{
@@ -44,13 +48,13 @@ export default function Home() {
               opacity: 0.4,
             }}
           />
-          <div className="relative flex flex-col items-center py-10 text-white">
+          <div className="relative flex flex-col items-center py-10 text-white ">
             <h2 className="p-4 border-b-2 border-white">Développement</h2>
-            <h3 className="p-10 pb-0 text-3xl sm:w-1/3 w-auto">
+            <h3 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl lg:w-1/3 w-auto">
               Polyvalence en Développement : Maîtrise des Langages C, Java,
               Python, HTML, CSS et JavaScript
             </h3>
-            <p className="text-center break-auto sm:w-1/3 w-auto">
+            <p className="text-center break-auto lg:w-1/3 w-auto sm:p-10 p-2 mb-9">
               Avec une expérience diversifiée dans les langages de programmation
               tels que le C, Java, Python, HTML, CSS et JavaScript, je possède
               une polyvalence solide en développement logiciel. Ayant travaillé
@@ -69,13 +73,13 @@ export default function Home() {
               opacity: 0.4,
             }}
           />
-          <div className="relative flex flex-col items-center py-10 text-white">
+          <div className="relative flex flex-col items-center py-10 text-white ">
             <h2 className="p-4 border-b-2 border-white">Systèmes et réseaux</h2>
-            <h3 className="p-10 pb-0 text-3xl sm:w-1/3 w-auto">
+            <h3 className="sm:p-10 p-2 pb-0 font-bold sm:text-3xl text-xl lg:w-1/3 w-auto">
               Maîtrise de la Modélisation de Bases de Données et de SQL :
               Conception et Gestion de Données Efficace
             </h3>
-            <p className="text-center break-autos p-10 sm:w-1/3 w-auto">
+            <p className="text-center break-auto lg:w-1/3 w-auto sm:p-10 p-2 mb-9">
               Je suis compétent dans la création, la gestion et
               l&apos;utilisation de bases de données, ainsi que dans
               l&apos;écriture de requêtes SQL. Ma capacité à concevoir des
