@@ -29,10 +29,11 @@ export default function Home() {
             </p>
           </div>
 
-          <a href="../images/CV.pdf" target="_blank">
+          <a href="../images/CV.pdf" target="_blank" aria-label="CV">
             <button
               className="flex flex-col p-3 m-5 text-white rounded-full border-2 border-white hover:border-transparent font-bold uppercase"
               title="Téléchargé mon CV ici !"
+              aria-label="Download CV"
             >
               Télécharger CV
             </button>

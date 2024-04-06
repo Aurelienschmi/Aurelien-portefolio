@@ -10,6 +10,7 @@ export default function Home() {
           src="https://docs.google.com/forms/d/e/1FAIpQLSfPxjUFOO0kcR-gOetzN9KUb1oAebuYi7yTOj2UH27obiHNSQ/viewform?embedded=true"
           width="580"
           height="580"
+          title="Contact Form"
         >
           Chargement…
         </iframe>
