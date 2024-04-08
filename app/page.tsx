@@ -16,7 +16,7 @@ export default function Home() {
               Aurélien Schmieder, étudiant à Enigma, Lille
             </h1>
             <p className="m-3 font-light text-sm">
-              Jeune passionné de 22 ans, je suis passionné d&apos;informatique,
+              Jeune de 22 ans, je suis passionné d&apos;informatique,
               particulièrement dans les systèmes et réseaux. Adepte de rugby et
               de musculation, je trouve un équilibre entre l&apos;effort
               physique et mental.
