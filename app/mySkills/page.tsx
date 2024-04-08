@@ -31,11 +31,11 @@ export default function Home() {
 
               <p className="text-center break-auto xl:w-1/3 w-auto sm:p-10 p-2 mb-9">
                 Certifié CCNAv7 et en cours de préparation pour les
-                certifications CCNA et CSNA, je possède une solide expertise en
-                réseautique. Ma formation m&apos;a permis de maîtriser les
-                principes fondamentaux des réseaux informatiques et de
-                développer des compétences pratiques en configuration, gestion
-                et dépannage.
+                certifications CCNA et CSNA, je possède de nombreuses
+                compétences en réseautique. Ma formation m&apos;a permis de
+                maîtriser les principes fondamentaux des réseaux informatiques
+                et de développer des compétences pratiques en configuration,
+                gestion et dépannage.
               </p>
             </div>
           </div>
