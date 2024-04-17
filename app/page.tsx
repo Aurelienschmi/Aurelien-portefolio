@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Footer from "./footer";
 import Header from "./header";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
@@ -49,6 +50,7 @@ export default function Home() {
         </div>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }

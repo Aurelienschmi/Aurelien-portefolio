@@ -1,5 +1,6 @@
 import Footer from "../footer";
 import Header from "../header";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   function About() {
@@ -91,6 +92,7 @@ export default function Home() {
         <div>
           <Footer />
         </div>
+        <Analytics />
       </main>
     </div>
   );
