@@ -20,13 +20,8 @@ export default function Home() {
               Jeune de 22 ans, je suis passionné d&apos;informatique,
               particulièrement dans les systèmes et réseaux. Adepte de rugby et
               de musculation, je trouve un équilibre entre l&apos;effort
-              physique et mental.
-              <span className="underline">
-                Actuellement à la recherche d&apos;un stage de deux mois minimum
-                à partir du 10 juin en systèmes et réseaux
-              </span>
-              , je suis motivé pour contribuer à des projets innovants et
-              enrichir mes compétences.
+              physique et mental. Je suis motivé pour contribuer à des projets
+              innovants et enrichir mes compétences.
             </p>
           </div>
 
