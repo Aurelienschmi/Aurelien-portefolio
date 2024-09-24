@@ -1,0 +1,11 @@
+{
+    "header": {
+        "About": "About",
+        "Resume": "Resume",
+        "Works": "Works",
+        "Contact": "Contact"
+    },
+    "home": {
+        "body": "what I do"
+    }
+}

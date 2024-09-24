@@ -1,0 +1,31 @@
+{
+    "header": {
+        "About": "Biographie",
+        "Resume": "CV ",
+        "Works": "Projets",
+        "Contact": "Contact"
+    },
+    "home": {
+        "About": "Biographie",
+        "AboutContent": "Je suis un développeur web full-stack passionné par la technologie et l'innovation. J'ai une expérience de plus de 5 ans dans le développement web et mobile. J'ai travaillé sur plusieurs projets en utilisant des technologies modernes et des frameworks populaires. J'ai une bonne connaissance des langages de programmation et des bases de données. J'ai également une expérience dans la gestion de projet et la gestion d'équipe. Je suis toujours à la recherche de nouveaux défis et de nouvelles opportunités pour améliorer mes compétences et mes connaissances.",
+        "About1": "Ce que je fais",
+        "Development": "Développement",
+        "DevelopmentContent": "Je développe des applications web et mobiles en utilisant des technologies modernes et des frameworks populaires.",
+        "Reseau": "Réseaux",
+        "ReseauContent": "Je construis des réseaux de communication et des systèmes de sécurité pour les entreprises et les particuliers.",
+        "BDD": "Base de données",
+        "BDDContent": "Je conçois et gère des bases de données pour stocker et gérer les données des applications.",
+        "Sport": "Sport",
+        "SportContent": "Je pratique le sport pour rester en forme et en bonne santé. J'aime le football, le tennis et la natation.",
+        "Certification": "Certification",
+        "Resume": "CV ",
+        "Education": "Éducation",
+        "Experience": "Expérience",
+        "Skills": "Compétences",
+        "Works": "Projets",
+        "Contact": "Contact"
+    },
+    "popUp": {
+        "Close": "Fermer"
+    }
+}
