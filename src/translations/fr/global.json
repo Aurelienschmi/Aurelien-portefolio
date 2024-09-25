@@ -1,29 +1,32 @@
 {
     "header": {
-        "About": "Biographie",
+        "About": "Bio",
         "Resume": "CV ",
         "Works": "Projets",
         "Contact": "Contact"
     },
     "home": {
         "About": "Biographie",
-        "AboutContent": "Je suis un développeur web full-stack passionné par la technologie et l'innovation. J'ai une expérience de plus de 5 ans dans le développement web et mobile. J'ai travaillé sur plusieurs projets en utilisant des technologies modernes et des frameworks populaires. J'ai une bonne connaissance des langages de programmation et des bases de données. J'ai également une expérience dans la gestion de projet et la gestion d'équipe. Je suis toujours à la recherche de nouveaux défis et de nouvelles opportunités pour améliorer mes compétences et mes connaissances.",
-        "About1": "Ce que je fais",
+        "AboutContent": "En tant qu'étudiant en deuxième année à l'école ENIGMA, je suis à la recherche d'une alternance en administration réseaux afin de commencer ma carrière dans ce domaine. Mon objectif à long terme est de me spécialiser dans la sécurité des réseaux, un domaine qui m'intéresse particulièrement. Je souhaite d'abord acquérir une solide expérience dans la gestion des infrastructures réseau ainsi que la configuration des systèmes. Doté d'une grande motivation et d'une autonomie certaine, je suis prêt à apporter mes compétences techniques au sein d'une équipe IT dynamique.",
+        "About1": "Ce que je fais !",
         "Development": "Développement",
-        "DevelopmentContent": "Je développe des applications web et mobiles en utilisant des technologies modernes et des frameworks populaires.",
+        "DevelopmentContent": "Fort d'une expérience en C, Java, Python, HTML, CSS et JavaScript, je suis polyvalent en développement logiciel, avec des projets allant de la programmation système aux applications web dynamiques.",
         "Reseau": "Réseaux",
-        "ReseauContent": "Je construis des réseaux de communication et des systèmes de sécurité pour les entreprises et les particuliers.",
+        "ReseauContent": "Ma formation m'a apporté une solide maîtrise des réseaux informatiques, ainsi que des compétences pratiques en configuration, gestion et dépannage.",
         "BDD": "Base de données",
-        "BDDContent": "Je conçois et gère des bases de données pour stocker et gérer les données des applications.",
+        "BDDContent": "Je maîtrise la gestion des bases de données avec SQL et NoSQL, incluant conception, maintenance et optimisation pour assurer performance et intégrité des données.",
         "Sport": "Sport",
-        "SportContent": "Je pratique le sport pour rester en forme et en bonne santé. J'aime le football, le tennis et la natation.",
+        "SportContent": "Je pratique actuellement la musculation et suis passionné par le rugby, que j'ai joué pendant ma jeunesse. Ces activités m'ont permis de développer discipline, endurance et esprit d'équipe.",
         "Certification": "Certification",
         "Resume": "CV ",
         "Education": "Éducation",
         "Experience": "Expérience",
         "Skills": "Compétences",
         "Works": "Projets",
-        "Contact": "Contact"
+        "Contact": "Contact",
+        "Network": "Réseaux",
+        "Dev": "Dev",
+        "Database": "Base de données"
     },
     "popUp": {
         "Close": "Fermer"

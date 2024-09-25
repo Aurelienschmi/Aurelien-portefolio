@@ -1,11 +1,34 @@
 {
     "header": {
-        "About": "About",
+        "About": "Biography",
         "Resume": "Resume",
-        "Works": "Works",
+        "Works": "Projects",
         "Contact": "Contact"
     },
     "home": {
-        "body": "what I do"
+        "About": "Biography",
+        "AboutContent": "As a second-year student at ENIGMA, I am seeking an internship in network administration to start my career in this field. My long-term goal is to specialize in network security, a field that particularly interests me. I first want to gain solid experience in managing network infrastructures and system configuration. Motivated and autonomous, I am ready to contribute my technical skills to a dynamic IT team.",
+        "About1": "What I do !",
+        "Development": "Development",
+        "DevelopmentContent": "With experience in C, Java, Python, HTML, CSS, and JavaScript, I am versatile in software development, working on projects ranging from system programming to dynamic web applications.",
+        "Reseau": "Networks",
+        "ReseauContent": "My training has provided me with a solid understanding of computer networks, as well as practical skills in configuration, management, and troubleshooting.",
+        "BDD": "Database",
+        "BDDContent": "I have expertise in database management with SQL and NoSQL, including design, maintenance, and optimization to ensure performance and data integrity.",
+        "Sport": "Sport",
+        "SportContent": "I currently practice weightlifting and am passionate about rugby, which I played in my youth. These activities have helped me develop discipline, endurance, and teamwork.",
+        "Certification": "Certification",
+        "Resume": "Resume",
+        "Education": "Education",
+        "Experience": "Experience",
+        "Skills": "Skills",
+        "Works": "Projects",
+        "Contact": "Contact",
+        "Network": "Network",
+        "Dev": "Dev",
+        "Database": "Database"
+    },
+    "popUp": {
+        "Close": "Close"
     }
 }

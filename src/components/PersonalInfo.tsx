@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const PersonalInfo: React.FC = () => {
+  const [birthDateIsHovered, setBirthDateIsHovered] = useState(false);
+  const [locationIsHovered, setLocationIsHovered] = useState(false);
+  const [emailIsHovered, setEmailIsHovered] = useState(false);
+  const [phoneIsHovered, setPhoneIsHovered] = useState(false);
+
   const calculateAge = (birthDate: string): number => {
     const birth = new Date(birthDate);
     const today = new Date();
@@ -21,13 +26,13 @@ const PersonalInfo: React.FC = () => {
 
   const age = calculateAge("2002-02-24");
   return (
-    <div className="flex flex-col justify-items-center place-items-center">
+    <div className="flex flex-col justify-items-center place-items-center text-black dark:text-white">
       <img
         src="/images/profile.png"
         className="h-40 w-40 rounded-full -mt-20"
         alt="Profile Aurélien SCHMIEDER"
       />
-      <h1 className="mt-3">Aurélien SCHMIEDER</h1>
+      <h1 className="mt-3 text-2xl font-bold">Aurélien SCHMIEDER</h1>
       <div className="social-media flex flex-wrap space-x-4 m-4">
         <section className="m-4">
           <button
@@ -81,13 +86,36 @@ const PersonalInfo: React.FC = () => {
           </button>
         </section>
       </div>
-      <div className="bg-slate-100 rounded-lg p-3">
-        <div className="flex border-b-2 py-2.5">
-          <img
-            src="/images/calendar.svg"
-            className="h-10 ml-5"
-            alt="icon phone"
-          />
+      <div className="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3">
+        <div className="flex border-b-2 dark:border-zinc-600 py-2.5 ml-5">
+          <button
+            className="bg-white dark:bg-black m-1 rounded-lg p-1 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors duration-600"
+            onMouseEnter={() => setBirthDateIsHovered(true)}
+            onMouseLeave={() => setBirthDateIsHovered(false)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              viewBox="-5.0 -5.0 110.0 120.0"
+              fill={birthDateIsHovered ? "white" : "#C17CEB"}
+              className="h-8 w-8"
+            >
+              <path d="m89.344 10.055h-9.1367v-5.3242c0-0.86328-0.69922-1.5625-1.5625-1.5625s-1.5625 0.69922-1.5625 1.5625v5.3242h-15.973v-5.3242c0-0.86328-0.69922-1.5625-1.5625-1.5625s-1.5625 0.69922-1.5625 1.5625v5.3242h-15.973v-5.3242c0-0.86328-0.69922-1.5625-1.5625-1.5625s-1.5625 0.69922-1.5625 1.5625v5.3242h-15.973v-5.3242c0-0.86328-0.69922-1.5625-1.5625-1.5625-0.86328 0-1.5625 0.69922-1.5625 1.5625v5.3242h-9.1367c-4.1523 0-7.5312 3.3789-7.5312 7.5312v71.758c0 4.1523 3.3789 7.5312 7.5312 7.5312h78.688c4.1523 0 7.5312-3.3789 7.5312-7.5312l0.003906-71.758c0-4.1523-3.3789-7.5312-7.5312-7.5312zm4.4062 79.289c0 2.4297-1.9766 4.4062-4.4062 4.4062h-78.688c-2.4297 0-4.4062-1.9766-4.4062-4.4062v-71.758c0-2.4297 1.9766-4.4062 4.4062-4.4062h9.1367v5.3242c0 0.86328 0.69922 1.5625 1.5625 1.5625s1.5625-0.69922 1.5625-1.5625v-5.3242h15.973v5.3242c0 0.86328 0.69922 1.5625 1.5625 1.5625s1.5625-0.69922 1.5625-1.5625v-5.3242h15.973v5.3242c0 0.86328 0.69922 1.5625 1.5625 1.5625s1.5625-0.69922 1.5625-1.5625v-5.3242h15.973v5.3242c0 0.86328 0.69922 1.5625 1.5625 1.5625 0.86328 0 1.5625-0.69922 1.5625-1.5625v-5.3242h9.1367c2.4297 0 4.4062 1.9766 4.4062 4.4062v71.758z" />
+              <path d="m27.391 34.836h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m46.441 34.836h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m65.488 34.836h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m84.539 34.836h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m27.391 53.359h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m46.441 53.359h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m65.488 53.359h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m84.539 53.359h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.684h-8.8047v-8.5586h8.8047z" />
+              <path d="m27.391 71.883h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.68h-8.8047v-8.5586h8.8047z" />
+              <path d="m46.441 71.883h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.68h-8.8047v-8.5586h8.8047z" />
+              <path d="m65.488 71.883h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.68h-8.8047v-8.5586h8.8047z" />
+              <path d="m84.539 71.883h-11.93c-0.86328 0-1.5625 0.69922-1.5625 1.5625v11.684c0 0.86328 0.69922 1.5625 1.5625 1.5625h11.93c0.86328 0 1.5625-0.69922 1.5625-1.5625v-11.684c0-0.86328-0.69922-1.5625-1.5625-1.5625zm-1.5625 11.68h-8.8047v-8.5586h8.8047z" />
+            </svg>
+          </button>
+
           <div>
             <p className="text-sm ml-5">
               <em>Âge</em>
@@ -96,13 +124,21 @@ const PersonalInfo: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex border-b-2 py-2.5">
-          <button onClick={openLocation}>
-            <img
-              src="/images/localisation.svg"
-              className="h-10 ml-5"
-              alt="icon localisation"
-            />
+        <div className="flex border-b-2 dark:border-zinc-600 py-2.5 ml-5">
+          <button
+            onClick={openLocation}
+            className="bg-white dark:bg-black m-1 rounded-lg p-1 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors duration-600"
+            onMouseEnter={() => setLocationIsHovered(true)}
+            onMouseLeave={() => setLocationIsHovered(false)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill={locationIsHovered ? "white" : "#FD7590"}
+              className="h-8 h-8"
+            >
+              <path d="M11,11.9V18h2v-6.1c2.3-0.5,4-2.5,4-4.9c0-2.8-2.2-5-5-5S7,4.2,7,7C7,9.4,8.7,11.4,11,11.9z M12,4c1.7,0,3,1.3,3,3  s-1.3,3-3,3S9,8.7,9,7S10.3,4,12,4z M22,16.8c-0.1-0.7-0.5-1.3-0.9-1.7c-0.9-1-2.5-1.6-4.3-2.1L16.3,15c1.6,0.4,2.8,1,3.3,1.5  c0.3,0.3,0.4,0.5,0.4,0.6c0,0.1,0,0.3-0.1,0.5c-0.3,0.5-1.2,1.1-2.7,1.6C15.7,19.7,13.9,20,12,20c-1.9,0-3.7-0.3-5.2-0.7  c-1.5-0.5-2.4-1.1-2.7-1.6C4,17.5,4,17.3,4,17.2c0-0.1,0.1-0.4,0.4-0.6C5,15.9,6.1,15.4,7.7,15L7.3,13c-1.8,0.4-3.3,1.1-4.3,2.1  c-0.5,0.5-0.8,1.1-0.9,1.7c-0.1,0.7,0.1,1.3,0.4,1.9c0.7,1.1,2.1,1.9,3.8,2.4C7.9,21.7,9.9,22,12,22c2.1,0,4.1-0.3,5.8-0.8  c1.6-0.5,3-1.3,3.8-2.4C21.9,18.2,22.1,17.5,22,16.8z" />
+            </svg>
           </button>
           <div>
             <p className="text-sm ml-5">
@@ -113,14 +149,35 @@ const PersonalInfo: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex border-b-2 py-2.5">
+        <div className="flex border-b-2 dark:border-zinc-600 py-2.5 ml-5">
           <a href="mailto:schmieder.aurelien@gmail.com">
-            <button className="holder:bg-white">
-              <img
-                src="/images/email.svg"
-                className="h-10 ml-5"
-                alt="icon phone"
-              />
+            <button
+              className="bg-white dark:bg-black m-1 rounded-lg p-1 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors duration-600"
+              onMouseEnter={() => setEmailIsHovered(true)}
+              onMouseLeave={() => setEmailIsHovered(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 10 100 80"
+                fill={emailIsHovered ? "white" : "#6AB5B9"}
+                className="h-8 w-8"
+              >
+                <path d="m88.66 82.555h-77.32c-4.2617-0.003907-7.7109-3.4531-7.7188-7.7148v-49.68c0.007812-4.2617 3.457-7.7109 7.7188-7.7148h77.32c4.2617 0.003907 7.7109 3.4531 7.7188 7.7148v49.68c-0.007812 4.2617-3.457 7.7109-7.7188 7.7148zm-74.391-6.25h71.457l-21.637-21.863-8.6016 8.6953c-3.0273 3.0273-7.9336 3.0312-10.965 0.011719l-8.6133-8.707zm54.219-26.305 21.637 21.867 0.003906-43.734zm-58.617-21.867v43.734l21.641-21.867zm4.4023-4.4375 34.68 35.047c0.58594 0.57031 1.5234 0.56641 2.1055-0.015626l34.668-35.031z" />
+                <text
+                  x="0.0"
+                  y="117.5"
+                  font-size="5.0"
+                  font-weight="bold"
+                  font-family="Arbeit Regular, Helvetica, Arial-Unicode, Arial, Sans-serif"
+                ></text>
+                <text
+                  x="0.0"
+                  y="122.5"
+                  font-size="5.0"
+                  font-weight="bold"
+                  font-family="Arbeit Regular, Helvetica, Arial-Unicode, Arial, Sans-serif"
+                ></text>
+              </svg>
             </button>
           </a>
           <div>
@@ -131,45 +188,64 @@ const PersonalInfo: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex py-2.5">
-          <button>
-            <img
-              src="/images/phone.svg"
-              className="h-10 ml-5"
-              alt="icon phone"
-            />
-          </button>
+        <div className="flex py-2.5 ml-5">
+          <a href="tel:+33781650003">
+            <button
+              className="bg-white dark:bg-black m-1 rounded-lg p-1 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors duration-600"
+              onMouseEnter={() => setPhoneIsHovered(true)}
+              onMouseLeave={() => setPhoneIsHovered(false)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                viewBox="50 0 240 350"
+                x="0px"
+                y="0px"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                fill={phoneIsHovered ? "white" : "#E93B81"}
+                stroke={phoneIsHovered ? "white" : "#E93B81"}
+                stroke-width="5"
+                className="h-8 w-8"
+              >
+                <defs>
+                  <style type="text/css"></style>
+                </defs>
+                <g>
+                  <path d="M101.67 10.02l130 0c9.15,0 17.48,3.75 23.52,9.78 6.06,6.07 9.81,14.39 9.81,23.55l0 246.62c0,9.15 -3.75,17.48 -9.78,23.52 -6.07,6.06 -14.39,9.81 -23.55,9.81l-130 0c-9.15,0 -17.48,-3.75 -23.52,-9.78 -6.06,-6.07 -9.81,-14.39 -9.81,-23.55l0 -246.62c0,-9.15 3.75,-17.48 9.78,-23.52 6.07,-6.06 14.39,-9.81 23.55,-9.81zm65 237.2c5.81,0 11.09,2.36 14.9,6.17 3.81,3.81 6.17,9.08 6.17,14.9 0,5.82 -2.36,11.09 -6.17,14.9l-0.46 0.42c-3.78,3.57 -8.87,5.75 -14.44,5.75 -5.79,0 -11.05,-2.36 -14.87,-6.17l-0.04 -0.04c-3.8,-3.82 -6.16,-9.07 -6.16,-14.85 0,-5.79 2.37,-11.06 6.19,-14.88 3.8,-3.83 9.06,-6.19 14.88,-6.19zm5.47 15.6c-1.4,-1.4 -3.34,-2.27 -5.47,-2.27 -2.14,0 -4.07,0.87 -5.47,2.27 -1.41,1.38 -2.27,3.32 -2.27,5.47 0,2.15 0.86,4.09 2.24,5.47 1.41,1.41 3.35,2.27 5.5,2.27 2.02,0 3.85,-0.76 5.21,-1.99l0.26 -0.28c1.4,-1.4 2.27,-3.33 2.27,-5.47 0,-2.13 -0.87,-4.07 -2.27,-5.47zm-19.67 -213.46c-3.67,0 -6.64,-2.97 -6.64,-6.64 0,-3.67 2.97,-6.64 6.64,-6.64l28.39 -0.01c3.67,0 6.64,2.97 6.64,6.64 0,3.67 -2.97,6.64 -6.64,6.64l-28.39 0.01zm79.19 -26.01l-130 0c-5.5,0 -10.51,2.25 -14.13,5.87 -3.61,3.62 -5.87,8.63 -5.87,14.13l0 246.62c0,5.5 2.25,10.51 5.87,14.13 3.62,3.61 8.63,5.87 14.13,5.87l130 0c5.5,0 10.51,-2.25 14.13,-5.87 3.61,-3.62 5.87,-8.63 5.87,-14.13l0 -246.62c0,-5.5 -2.25,-10.51 -5.87,-14.13 -3.62,-3.61 -8.63,-5.87 -14.13,-5.87z" />
+                </g>
+              </svg>
+            </button>
+          </a>
           <div>
             <p className="text-sm ml-5">
               <em>Téléphone:</em>
             </p>
-            <a href="tel:+33781650003" className="ml-5">
-              07 81 65 00 03
-            </a>
+            <p className="ml-5">07 81 65 00 03</p>
           </div>
         </div>
       </div>
 
       <button
-        className="bg-blue-500 text-white font-semibold rounded-lg p-2 mt-4 border hover:bg-blue-100 hover:text-black hover:border hover:border-blue-500 transition-all duration-300"
+        className="bg-blue-500 text-white font-semibold rounded-lg p-2 mt-8 border hover:bg-blue-100 hover:text-black hover:border hover:border-blue-500 transition-all duration-300 dark:border-blue-500 dark:hover:text-white dark:hover:bg-zinc-800"
         onClick={() => {
           window.open("/images/CV-Aurelien-SCHMIEDER.pdf", "_blank");
         }}
       >
         <div className="flex items-center space-x-2">
           <svg
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        viewBox="0 0 64 80"
-        x="0px"
-        y="0px"
-        className="h-9 group-hover:fill-black"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 64 80"
+            x="0px"
+            y="0px"
+            className="h-9 group-hover:fill-black"
           >
-        <title>download</title>
-        <path
-          d="M27.294 5.724c-1.243 0-2.271 1.042-2.271 2.276v19.375h-6.198c-0.91 0-1.752 0.544-2.104 1.406-0.343 0.839-0.156 1.823 0.495 2.474l13.182 13.182c0.442 0.435 1.013 0.658 1.599 0.661h0.011c0.576-0.003 1.166-0.233 1.599-0.667l13.177-13.177c0.642-0.642 0.852-1.622 0.495-2.479-0.352-0.844-1.191-1.401-2.099-1.401h-6.198v-19.375c0-1.243-1.033-2.276-2.276-2.276zM29.57 10.276h4.865v19.37c0 1.243 1.033 2.276 2.276 2.276h2.979l-7.688 7.688-7.688-7.688h2.979c1.243 0 2.276-1.033 2.276-2.276zM4.706 37.724c-1.243 0-2.276 1.033-2.276 2.276v16c0 1.243 1.033 2.276 2.276 2.276h54.589c1.243 0 2.276-1.033 2.276-2.276v-16c0-1.243-1.033-2.276-2.276-2.276h-13.49c-1.243 0-2.276 1.033-2.276 2.276s1.033 2.276 2.276 2.276h11.219v11.448h-50.042v-11.448h11.214c1.243 0 2.276-1.033 2.276-2.276s-1.033-2.276-2.276-2.276z"
-          fill="currentColor"
-        />
+            <title>download</title>
+            <path
+              d="M27.294 5.724c-1.243 0-2.271 1.042-2.271 2.276v19.375h-6.198c-0.91 0-1.752 0.544-2.104 1.406-0.343 0.839-0.156 1.823 0.495 2.474l13.182 13.182c0.442 0.435 1.013 0.658 1.599 0.661h0.011c0.576-0.003 1.166-0.233 1.599-0.667l13.177-13.177c0.642-0.642 0.852-1.622 0.495-2.479-0.352-0.844-1.191-1.401-2.099-1.401h-6.198v-19.375c0-1.243-1.033-2.276-2.276-2.276zM29.57 10.276h4.865v19.37c0 1.243 1.033 2.276 2.276 2.276h2.979l-7.688 7.688-7.688-7.688h2.979c1.243 0 2.276-1.033 2.276-2.276zM4.706 37.724c-1.243 0-2.276 1.033-2.276 2.276v16c0 1.243 1.033 2.276 2.276 2.276h54.589c1.243 0 2.276-1.033 2.276-2.276v-16c0-1.243-1.033-2.276-2.276-2.276h-13.49c-1.243 0-2.276 1.033-2.276 2.276s1.033 2.276 2.276 2.276h11.219v11.448h-50.042v-11.448h11.214c1.243 0 2.276-1.033 2.276-2.276s-1.033-2.276-2.276-2.276z"
+              fill="currentColor"
+            />
           </svg>
           <p>Télécharger mon CV</p>
         </div>
