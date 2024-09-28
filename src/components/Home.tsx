@@ -80,26 +80,60 @@ const Home = () => {
             <p className="mx-6">{t("home.AboutContent")}</p>
             <h3 className="text-2xl font-semibold mx-6">{t("home.About1")}</h3>
             <div className="flex flex-wrap justify-around">
-              <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold p-2 ">
-                  {t("home.Development")}
-                </h4>
-                <p className="text-center">{t("home.DevelopmentContent")}</p>
+              <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
+                <img
+                  src="/images/dev.svg"
+                  alt="developpment icon"
+                  className="h-20"
+                />
+                <div className="flex flex-col m-5">
+                  <h4 className="text-lg font-semibold pb-2">
+                    {t("home.Development")}
+                  </h4>
+                  <p className="">{t("home.DevelopmentContent")}</p>
+                </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.Reseau")}</h4>
-                <p className="text-center">{t("home.ReseauContent")}</p>
+              <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
+                <img
+                  src="/images/network.svg"
+                  alt="developpment icon"
+                  className="h-20"
+                />
+                <div className="flex flex-col m-5">
+                  <h4 className="text-lg font-semibold pb-2">
+                    {t("home.Reseau")}
+                  </h4>
+                  <p className="">{t("home.ReseauContent")}</p>
+                </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.BDD")}</h4>
-                <p className="text-center">{t("home.BDDContent")}</p>
+              <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
+                <img
+                  src="/images/database.svg"
+                  alt="developpment icon"
+                  className="h-20"
+                />
+                <div className="flex flex-col m-5">
+                  <h4 className="text-lg font-semibold pb-2">
+                    {t("home.BDD")}
+                  </h4>
+                  <p className="">{t("home.BDDContent")}</p>
+                </div>
               </div>
 
-              <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.Sport")}</h4>
-                <p className="text-center">{t("home.SportContent")}</p>
+              <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
+                <img
+                  src="/images/sports.svg"
+                  alt="developpment icon"
+                  className="h-20"
+                />
+                <div className="flex flex-col m-5">
+                  <h4 className="text-lg font-semibold pb-2">
+                    {t("home.Development")}
+                  </h4>
+                  <p className="">{t("home.DevelopmentContent")}</p>
+                </div>
               </div>
             </div>
             <h3 className="text-2xl font-semibold mx-6">
@@ -137,58 +171,133 @@ const Home = () => {
 
           <div className="flex flex-wrap justify-around">
             <div>
-              <h3 className="text-2xl font-semibold m-8">
-                {t("home.Education")}
-              </h3>
-              <div className="bg-pink-50 dark:bg-fuchsia-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold p-2">
-                  {t("home.Development")}
-                </h4>
-                <p className="text-center">{t("home.DevelopmentContent")}</p>
+              <div className="mt-8 flex flex-nowrap items-center">
+                <img
+                  src="/images/education.svg"
+                  alt="education icon"
+                  className="h-12 pr-2"
+                />
+                <h3 className="text-2xl font-semibold">
+                  {t("home.Education")}
+                </h3>
               </div>
 
-              <div className="bg-blue-50 dark:bg-indigo-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.Reseau")}</h4>
-                <p className="text-center">{t("home.ReseauContent")}</p>
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-auto flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.EnigmaYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Enigma")}
+                    </h4>
+                    <p>{t("home.EnigmaStatus")}</p>
+                  </div>
+
+                  <p>{t("home.EnigmaContent")}</p>
+                  <p> {t("home.EnigmaPosition")}</p>
+                </div>
               </div>
 
-              <div className="bg-pink-50 dark:bg-fuchsia-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.BDD")}</h4>
-                <p className="text-center">{t("home.BDDContent")}</p>
+              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.StapsYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Staps")}
+                    </h4>
+                    <p>{t("home.StapsStatus")}</p>
+                  </div>
+
+                  <p>{t("home.StapsContent")}</p>
+                  <p> {t("home.StapsPosition")}</p>
+                </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-indigo-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.Sport")}</h4>
-                <p className="text-center">{t("home.SportContent")}</p>
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.LyceeYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Lycee")}
+                    </h4>
+                    <p>{t("home.LyceeStatus")}</p>
+                  </div>
+
+                  <p>{t("home.LyceeContent")}</p>
+                  <p> {t("home.LyceePosition")}</p>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-nowrap items-center">
+                <img
+                  src="/images/experience.svg"
+                  alt="experience icon"
+                  className="h-12 pr-2"
+                />
+                <h3 className="text-2xl font-semibold">
+                  {t("home.Experience")}
+                </h3>
+              </div>
+
+              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-auto flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.RdcYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Rdc")}
+                    </h4>
+                    <p>{t("home.RdcStatus")}</p>
+                  </div>
+
+                  <p>{t("home.RdcContent")}</p>
+                  <p> {t("home.RdcPosition")}</p>
+                </div>
+              </div>
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.FamifloraYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Famiflora")}
+                    </h4>
+                    <p>{t("home.FamifloraStatus")}</p>
+                  </div>
+
+                  <p>{t("home.FamifloraContent")}</p>
+                  <p> {t("home.FamifloraPosition")}</p>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.DispeoYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Dispeo")}
+                    </h4>
+                    <p>{t("home.DispeoStatus")}</p>
+                  </div>
+
+                  <p>{t("home.DispeoContent")}</p>
+                  <p> {t("home.DispeoPosition")}</p>
+                </div>
+              </div>
+
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.ChronoYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Chrono")}
+                    </h4>
+                    <p>{t("home.ChronoStatus")}</p>
+                  </div>
+
+                  <p>{t("home.ChronoContent")}</p>
+                  <p> {t("home.ChronoPosition")}</p>
+                </div>
               </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold m-8">
-                {t("home.Experience")}
-              </h3>
-              <div className="bg-blue-50 dark:bg-fuchsia-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold p-2">
-                  {t("home.Development")}
-                </h4>
-                <p className="text-center">{t("home.DevelopmentContent")}</p>
-              </div>
 
-              <div className="bg-pink-50 dark:bg-indigo-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.Reseau")}</h4>
-                <p className="text-center">{t("home.ReseauContent")}</p>
-              </div>
-
-              <div className="bg-blue-50 dark:bg-fuchsia-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.BDD")}</h4>
-                <p className="text-center">{t("home.BDDContent")}</p>
-              </div>
-
-              <div className="bg-pink-50 dark:bg-indigo-800 rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-center m-5">
-                <h4 className="text-lg font-semibold">{t("home.Sport")}</h4>
-                <p className="text-center">{t("home.SportContent")}</p>
-              </div>
-            </div>
-          {/* </div>
+            {/* </div>
              <h3 className="text-2xl font-semibold">{t("home.Skills")}</h3>
 
             <div className="flex justify-center">
@@ -242,8 +351,9 @@ const Home = () => {
       )}
       {works && (
         <>
-        <div><UnderConstruction /></div>
-          
+          <div>
+            <UnderConstruction />
+          </div>
         </>
       )}
       {contact && (

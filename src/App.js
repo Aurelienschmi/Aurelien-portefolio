@@ -4,6 +4,7 @@ import Home from "./components/Home.tsx";
 import SwitchTheme from "./components/SwitchTheme.tsx";
 import Translation from "./components/Translation.tsx";
 import PersonalInfo from "./components/PersonalInfo.tsx";
+import BurgerMenu from "./components/BurgerMenu.tsx";
 import { AppProvider } from "./context/AppContext.tsx";
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
           <PersonalInfo />
         </div>
         <div className="absolute top-0 right-0 m-4 flex space-x-4">
+
           <Translation />
           <SwitchTheme toggleDarkMode={toggleDarkMode} />
         </div>
