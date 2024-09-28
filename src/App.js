@@ -31,33 +31,29 @@ const App = () => {
   return (
     <AppProvider>
       <div
-        className={`bg-cover bg-center flex justify-center items-center min-h-screen ${isDarkMode ? 'bg-dark' : 'bg-light'}`}
+        className={`bg-cover bg-center flex justify-center items-start min-h-screen ${isDarkMode ? 'bg-dark' : 'bg-light'}`}
         style={{
           backgroundImage: isDarkMode
-            ? `url(/images/background_dark.png)`
-            : `url(/images/background_light.png)`
+            ? `url(/images/background_dark.jpg)`
+            : `url(/images/background_light.jpg)`
         }}
       >
-        <div className="bg-white dark:bg-black rounded-3xl p-6 ">
+        <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-6 mt-56">
           <PersonalInfo />
         </div>
         <div className="absolute top-0 right-0 m-4 flex space-x-4">
           <Translation />
           <SwitchTheme toggleDarkMode={toggleDarkMode} />
         </div>
-        <div className="flex flex-col items-center w-1/2 p-5 m-5 bg-white dark:bg-black rounded-3xl mt-40">
+        <div className="flex flex-col w-1/2 p-5 m-5 bg-white dark:bg-black rounded-3xl mt-40">
           <Home about={about} resume={resume} works={works} contact={contact} />
         </div>
-        <div className="bg-white dark:bg-black rounded-3xl p-4">
+        <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-4 mt-56">
           <Header
             about={about}
             resume={resume}
             works={works}
             contact={contact}
-            setAbout={setAbout}
-            setResume={setResume}
-            setWorks={setWorks}
-            setContact={setContact}
           />
         </div>
       </div>

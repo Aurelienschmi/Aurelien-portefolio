@@ -188,61 +188,62 @@ const Home = () => {
                 <p className="text-center">{t("home.SportContent")}</p>
               </div>
             </div>
-          </div>
-          <h3 className="text-2xl font-semibold">{t("home.Skills")}</h3>
+          {/* </div>
+             <h3 className="text-2xl font-semibold">{t("home.Skills")}</h3>
 
-          <div className="flex justify-center">
+            <div className="flex justify-center">
             <div className="m-12">
               <button
-                onClick={togglePopup}
-                className="h-20 w-20 px-4 py-2 border border-blue-500 bg-blue-500 hover:bg-blue-50 hover:text-black dark:bg-blue-700 text-white rounded-lg dark:text-white dark:hover:bg-zinc-800 flex items-center justify-center"
+              onClick={togglePopup}
+              className="h-20 w-20 px-4 py-2 border border-blue-500 bg-blue-500 hover:bg-blue-50 hover:text-black dark:bg-blue-700 text-white rounded-lg dark:text-white dark:hover:bg-zinc-800 flex items-center justify-center"
               >
-                <p>{t("home.Network")}</p>{" "}
+              <p>{t("home.Network")}</p>{" "}
               </button>
               <Popup
-                title={t("home.Network")}
-                message="Here are your progress bars:"
-                isOpen={isPopupOpen}
-                onClose={togglePopup}
-                progressBar={progressBars("ici", "la", "bah", "je", "suis")}
+              title={t("home.Network")}
+              message="Here are your progress bars:"
+              isOpen={isPopupOpen}
+              onClose={togglePopup}
+              progressBar={progressBars("tu", "la", "bah", "je", "suis")}
               />
             </div>
             <div className="m-12">
               <button
-                onClick={togglePopup}
-                className="h-20 w-20 px-4 py-2 border border-blue-500 bg-blue-500 hover:bg-blue-50 hover:text-black dark:bg-blue-700 text-white rounded-lg dark:text-white dark:hover:bg-zinc-800 flex items-center justify-center"
+              onClick={togglePopup}
+              className="h-20 w-20 px-4 py-2 border border-blue-500 bg-blue-500 hover:bg-blue-50 hover:text-black dark:bg-blue-700 text-white rounded-lg dark:text-white dark:hover:bg-zinc-800 flex items-center justify-center"
               >
-                <p>{t("home.Dev")}</p>{" "}
+              <p>{t("home.Dev")}</p>{" "}
               </button>
               <Popup
-                title={t("home.Dev")}
-                message="Here are your progress bars:"
-                isOpen={isPopupOpen}
-                onClose={togglePopup}
-                progressBar={progressBars("ici", "la", "bah", "je", "suis")}
+              title={t("home.Dev")}
+              message="Here are your progress bars:"
+              isOpen={isPopupOpen}
+              onClose={togglePopup}
+              progressBar={progressBars("je", "la", "bah", "je", "suis")}
               />
             </div>
             <div className="m-12">
               <button
-                onClick={togglePopup}
-                className="h-20 w-20 px-4 py-2 border border-blue-500 bg-blue-500 hover:bg-blue-50 hover:text-black dark:bg-blue-700 text-white rounded-lg dark:text-white dark:hover:bg-zinc-800 flex items-center justify-center"
+              onClick={togglePopup}
+              className="h-20 w-20 px-4 py-2 border border-blue-500 bg-blue-500 hover:bg-blue-50 hover:text-black dark:bg-blue-700 text-white rounded-lg dark:text-white dark:hover:bg-zinc-800 flex items-center justify-center"
               >
-                <p>{t("home.Database")}</p>{" "}
+              <p>{t("home.Database")}</p>{" "}
               </button>
               <Popup
-                title={t("home.Database")}
-                message="Here are your progress bars:"
-                isOpen={isPopupOpen}
-                onClose={togglePopup}
-                progressBar={progressBars("ici", "la", "bah", "je", "suis")}
+              title={t("home.Database")}
+              message="Here are your progress bars:"
+              isOpen={isPopupOpen}
+              onClose={togglePopup}
+              progressBar={progressBars("ici", "la", "bah", "je", "suis")}
               />
-            </div>
+            </div> */}
           </div>
         </>
       )}
       {works && (
         <>
-          <UnderConstruction />
+        <div><UnderConstruction /></div>
+          
         </>
       )}
       {contact && (
