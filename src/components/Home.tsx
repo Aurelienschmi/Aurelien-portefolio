@@ -79,60 +79,64 @@ const Home = () => {
             </div>
             <p className="mx-6">{t("home.AboutContent")}</p>
             <h3 className="text-2xl font-semibold mx-6">{t("home.About1")}</h3>
-            <div className="flex flex-wrap justify-around">
-              <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
-                <img
-                  src="/images/dev.svg"
-                  alt="developpment icon"
-                  className="h-20"
-                />
-                <div className="flex flex-col m-5">
-                  <h4 className="text-lg font-semibold pb-2">
-                    {t("home.Development")}
-                  </h4>
-                  <p className="">{t("home.DevelopmentContent")}</p>
+            <div className="flex flex-wrap justify-around 2xl:flex-nowrap ">
+              <div >
+                <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-auto h-auto flex justify-start m-2">
+                  <img
+                    src="/images/dev.svg"
+                    alt="developpment icon"
+                    className="h-20"
+                  />
+                  <div className="flex flex-col m-5">
+                    <h4 className="text-lg font-semibold pb-2">
+                      {t("home.Development")}
+                    </h4>
+                    <p className="">{t("home.DevelopmentContent")}</p>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-auto h-auto flex justify-start m-2">
+                  <img
+                    src="/images/network.svg"
+                    alt="developpment icon"
+                    className="h-20"
+                  />
+                  <div className="flex flex-col m-5">
+                    <h4 className="text-lg font-semibold pb-2">
+                      {t("home.Reseau")}
+                    </h4>
+                    <p className="">{t("home.ReseauContent")}</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
-                <img
-                  src="/images/network.svg"
-                  alt="developpment icon"
-                  className="h-20"
-                />
-                <div className="flex flex-col m-5">
-                  <h4 className="text-lg font-semibold pb-2">
-                    {t("home.Reseau")}
-                  </h4>
-                  <p className="">{t("home.ReseauContent")}</p>
+              <div className="">
+                <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-auto h-auto flex justify-start m-2">
+                  <img
+                    src="/images/database.svg"
+                    alt="developpment icon"
+                    className="h-20"
+                  />
+                  <div className="flex flex-col m-5">
+                    <h4 className="text-lg font-semibold pb-2">
+                      {t("home.BDD")}
+                    </h4>
+                    <p className="">{t("home.BDDContent")}</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="bg-blue-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
-                <img
-                  src="/images/database.svg"
-                  alt="developpment icon"
-                  className="h-20"
-                />
-                <div className="flex flex-col m-5">
-                  <h4 className="text-lg font-semibold pb-2">
-                    {t("home.BDD")}
-                  </h4>
-                  <p className="">{t("home.BDDContent")}</p>
-                </div>
-              </div>
-
-              <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-96 h-auto flex justify-start m-2">
-                <img
-                  src="/images/sports.svg"
-                  alt="developpment icon"
-                  className="h-20"
-                />
-                <div className="flex flex-col m-5">
-                  <h4 className="text-lg font-semibold pb-2">
-                    {t("home.Development")}
-                  </h4>
-                  <p className="">{t("home.DevelopmentContent")}</p>
+                <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-auto h-auto flex justify-start m-2">
+                  <img
+                    src="/images/sports.svg"
+                    alt="developpment icon"
+                    className="h-20"
+                  />
+                  <div className="flex flex-col m-5">
+                    <h4 className="text-lg font-semibold pb-2">
+                      {t("home.Development")}
+                    </h4>
+                    <p className="">{t("home.DevelopmentContent")}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -169,7 +173,7 @@ const Home = () => {
             <div className="w-40 border-t-4 border-blue-500 rounded-3xl "></div>
           </div>
 
-          <div className="flex flex-wrap justify-around">
+          <div className="">
             <div>
               <div className="mt-8 flex flex-nowrap items-center">
                 <img
@@ -181,51 +185,54 @@ const Home = () => {
                   {t("home.Education")}
                 </h3>
               </div>
+              <div className="flex justify-around">
+                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-full 2xl:w-auto h-auto flex flex-col justify-center items-center 2xl:items-start m-5">
+                  <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                    <p className="text-sm">{t("home.EnigmaYear")}</p>
+                    <div className="flex flex-nowrap items-center ">
+                      <h4 className="text-lg font-semibold text-black dark:text-white">
+                        {t("home.Enigma")}
+                      </h4>
+                      <p>{t("home.EnigmaStatus")}</p>
+                    </div>
 
-              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-auto flex flex-col justify-center items-start m-5">
-                <div className="p-2 text-zinc-600 dark:text-zinc-400">
-                  <p className="text-sm">{t("home.EnigmaYear")}</p>
-                  <div className="flex flex-nowrap items-center ">
-                    <h4 className="text-lg font-semibold text-black dark:text-white">
-                      {t("home.Enigma")}
-                    </h4>
-                    <p>{t("home.EnigmaStatus")}</p>
+                    <p>{t("home.EnigmaContent")}</p>
+                    <p> {t("home.EnigmaPosition")}</p>
                   </div>
+                </div>
+              </div>
+              <div className="flex flex-wrap justify-around 2xl:flex-nowrap">
+                <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-full 2xl:w-80 h-40 flex flex-col justify-center items-center 2xl:items-start m-5">
+                  <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                    <p className="text-sm">{t("home.StapsYear")}</p>
+                    <div className="flex flex-nowrap items-center ">
+                      <h4 className="text-lg font-semibold text-black dark:text-white">
+                        {t("home.Staps")}
+                      </h4>
+                      <p>{t("home.StapsStatus")}</p>
+                    </div>
 
-                  <p>{t("home.EnigmaContent")}</p>
-                  <p> {t("home.EnigmaPosition")}</p>
+                    <p>{t("home.StapsContent")}</p>
+                    <p> {t("home.StapsPosition")}</p>
+                  </div>
+                </div>
+
+                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-full 2xl:w-80 h-40 flex flex-col justify-center items-center items-start m-5">
+                  <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                    <p className="text-sm">{t("home.LyceeYear")}</p>
+                    <div className="flex flex-nowrap items-center ">
+                      <h4 className="text-lg font-semibold text-black dark:text-white">
+                        {t("home.Lycee")}
+                      </h4>
+                      <p>{t("home.LyceeStatus")}</p>
+                    </div>
+
+                    <p>{t("home.LyceeContent")}</p>
+                    <p> {t("home.LyceePosition")}</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
-                <div className="p-2 text-zinc-600 dark:text-zinc-400">
-                  <p className="text-sm">{t("home.StapsYear")}</p>
-                  <div className="flex flex-nowrap items-center ">
-                    <h4 className="text-lg font-semibold text-black dark:text-white">
-                      {t("home.Staps")}
-                    </h4>
-                    <p>{t("home.StapsStatus")}</p>
-                  </div>
-
-                  <p>{t("home.StapsContent")}</p>
-                  <p> {t("home.StapsPosition")}</p>
-                </div>
-              </div>
-
-              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
-                <div className="p-2 text-zinc-600 dark:text-zinc-400">
-                  <p className="text-sm">{t("home.LyceeYear")}</p>
-                  <div className="flex flex-nowrap items-center ">
-                    <h4 className="text-lg font-semibold text-black dark:text-white">
-                      {t("home.Lycee")}
-                    </h4>
-                    <p>{t("home.LyceeStatus")}</p>
-                  </div>
-
-                  <p>{t("home.LyceeContent")}</p>
-                  <p> {t("home.LyceePosition")}</p>
-                </div>
-              </div>
               <div className="mt-8 flex flex-nowrap items-center">
                 <img
                   src="/images/experience.svg"
@@ -237,7 +244,7 @@ const Home = () => {
                 </h3>
               </div>
 
-              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-auto flex flex-col justify-center items-start m-5">
+              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col justify-center items-start m-5">
                 <div className="p-2 text-zinc-600 dark:text-zinc-400">
                   <p className="text-sm">{t("home.RdcYear")}</p>
                   <div className="flex flex-nowrap items-center ">
@@ -251,7 +258,7 @@ const Home = () => {
                   <p> {t("home.RdcPosition")}</p>
                 </div>
               </div>
-              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-40 flex flex-col justify-center items-start m-5">
                 <div className="p-2 text-zinc-600 dark:text-zinc-400">
                   <p className="text-sm">{t("home.FamifloraYear")}</p>
                   <div className="flex flex-nowrap items-center ">
@@ -266,7 +273,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-40 flex flex-col justify-center items-start m-5">
                 <div className="p-2 text-zinc-600 dark:text-zinc-400">
                   <p className="text-sm">{t("home.DispeoYear")}</p>
                   <div className="flex flex-nowrap items-center ">
@@ -281,7 +288,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-96 h-40 flex flex-col justify-center items-start m-5">
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-40 flex flex-col justify-center items-start m-5">
                 <div className="p-2 text-zinc-600 dark:text-zinc-400">
                   <p className="text-sm">{t("home.ChronoYear")}</p>
                   <div className="flex flex-nowrap items-center ">

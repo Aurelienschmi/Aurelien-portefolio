@@ -8,11 +8,12 @@ import BurgerMenu from "./components/BurgerMenu.tsx";
 import { AppProvider } from "./context/AppContext.tsx";
 
 const App = () => {
-  const [about, setAbout] = useState(true);
-  const [resume, setResume] = useState(false);
-  const [works, setWorks] = useState(false);
-  const [contact, setContact] = useState(false);
+  const [about] = useState(true);
+  const [resume] = useState(false);
+  const [works] = useState(false);
+  const [contact] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const darkModeClass = 'dark';
@@ -24,6 +25,17 @@ const App = () => {
       rootElement.classList.remove(darkModeClass);
     }
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -43,7 +55,9 @@ const App = () => {
           <PersonalInfo />
         </div>
         <div className="absolute top-0 right-0 m-4 flex space-x-4">
-
+          {windowWidth <= 1080 && (
+            <BurgerMenu about={about} resume={resume} works={works} contact={contact} />
+          )}
           <Translation />
           <SwitchTheme toggleDarkMode={toggleDarkMode} />
         </div>
@@ -51,12 +65,9 @@ const App = () => {
           <Home about={about} resume={resume} works={works} contact={contact} />
         </div>
         <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-4 mt-56">
-          <Header
-            about={about}
-            resume={resume}
-            works={works}
-            contact={contact}
-          />
+        {windowWidth > 1080 && (
+            <Header about={about} resume={resume} works={works} contact={contact} />
+          )}
         </div>
       </div>
     </AppProvider>
