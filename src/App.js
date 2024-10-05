@@ -13,10 +13,9 @@ const App = () => {
   const [works] = useState(false);
   const [contact] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const darkModeClass = 'dark';
+    const darkModeClass = "dark";
     const rootElement = document.documentElement;
 
     if (isDarkMode) {
@@ -26,17 +25,6 @@ const App = () => {
     }
   }, [isDarkMode]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
@@ -44,30 +32,43 @@ const App = () => {
   return (
     <AppProvider>
       <div
-        className={`bg-cover bg-center flex justify-center items-start min-h-screen ${isDarkMode ? 'bg-dark' : 'bg-light'}`}
+        className={`bg-cover bg-center flex flex-wrap lg:flex-nowrap justify-center items-start min-h-screen ${
+          isDarkMode ? "bg-dark" : "bg-light"
+        }`}
         style={{
           backgroundImage: isDarkMode
             ? `url(/images/background_dark.jpg)`
-            : `url(/images/background_light.jpg)`
+            : `url(/images/background_light.jpg)`,
         }}
       >
-        <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-6 mt-56">
-          <PersonalInfo />
-        </div>
-        <div className="absolute top-0 right-0 m-4 flex space-x-4">
-          {windowWidth <= 1080 && (
-            <BurgerMenu about={about} resume={resume} works={works} contact={contact} />
-          )}
+        <div className="absolute top-0 right-0 m-4 flex space-x-4 ">
+          <div className="2xl:hidden">
+          <BurgerMenu
+              about={about}
+              resume={resume}
+              works={works}
+              contact={contact}
+            />
+          </div>
+            
           <Translation />
           <SwitchTheme toggleDarkMode={toggleDarkMode} />
         </div>
-        <div className="flex flex-col w-1/2 p-5 m-5 bg-white dark:bg-black rounded-3xl mt-40">
+
+        <div className="lg:sticky top-16 bg-white dark:bg-black rounded-3xl p-6 mt-56 w-5/6 lg:w-1/3 mx-5">
+          <PersonalInfo />
+        </div>
+
+        <div className="flex flex-col w-5/6 p-5 m-5 bg-white dark:bg-black rounded-3xl lg:mt-40 bx-border">
           <Home about={about} resume={resume} works={works} contact={contact} />
         </div>
-        <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-4 mt-56">
-        {windowWidth > 1080 && (
-            <Header about={about} resume={resume} works={works} contact={contact} />
-          )}
+        <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-4 mt-56 hidden 2xl:block mx-5">
+            <Header
+              about={about}
+              resume={resume}
+              works={works}
+              contact={contact}
+            />
         </div>
       </div>
     </AppProvider>

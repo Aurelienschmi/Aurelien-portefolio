@@ -5,6 +5,12 @@
         "Works": "Projects",
         "Contact": "Contact"
     },
+    "personnalInfo": {
+        "Age": "Age",
+        "Localisation": "Localisation ",
+        "Email": "Email",
+        "Phone": "Phone"
+    },
     "home": {
         "About": "Biography",
         "AboutContent": "As a second-year student at ENIGMA school, I am looking for an apprenticeship in network administration to start my career in this field. My long-term goal is to specialize in network security, a domain that particularly interests me. I aim to first acquire solid experience in network infrastructure management as well as system configuration. Highly motivated and autonomous, I am ready to bring my technical skills to a dynamic IT team.",

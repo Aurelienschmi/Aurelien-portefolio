@@ -5,6 +5,12 @@
         "Works": "Projets",
         "Contact": "Contact"
     },
+    "personnalInfo": {
+        "Age": "Âge",
+        "Localisation": "Localisation ",
+        "Email": "Email",
+        "Phone": "Téléphone"
+    },
     "home": {
         "About": "Biographie",
         "AboutContent": "En tant qu'étudiant en deuxième année à l'école ENIGMA, je suis à la recherche d'une alternance en administration réseaux afin de commencer ma carrière dans ce domaine. Mon objectif à long terme est de me spécialiser dans la sécurité des réseaux, un domaine qui m'intéresse particulièrement. Je souhaite d'abord acquérir une solide expérience dans la gestion des infrastructures réseau ainsi que la configuration des systèmes. Doté d'une grande motivation et d'une autonomie certaine, je suis prêt à apporter mes compétences techniques au sein d'une équipe IT dynamique.",

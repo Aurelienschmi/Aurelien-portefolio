@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 const PersonalInfo: React.FC = () => {
   const [birthDateIsHovered, setBirthDateIsHovered] = useState(false);
   const [locationIsHovered, setLocationIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
+
+  const { t } = useTranslation("global");
 
   const calculateAge = (birthDate: string): number => {
     const birth = new Date(birthDate);
@@ -86,7 +89,7 @@ const PersonalInfo: React.FC = () => {
           </button>
         </section>
       </div>
-      <div className="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3">
+      <div className="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3 w-full">
         <div className="flex border-b-2 dark:border-zinc-600 py-2.5 ml-5">
           <button
             className="bg-white dark:bg-black m-1 rounded-lg p-1 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors duration-600"
@@ -118,7 +121,7 @@ const PersonalInfo: React.FC = () => {
 
           <div>
             <p className="text-sm ml-5">
-              <em>Âge</em>
+              <em>{t("personnalInfo.Age")}</em>
             </p>
             <p className="ml-5">{age} ans</p>
           </div>
@@ -142,14 +145,14 @@ const PersonalInfo: React.FC = () => {
           </button>
           <div>
             <p className="text-sm ml-5">
-              <em>Localisation:</em>
+              <em>{t("personnalInfo.Localisation")}</em>
             </p>
 
             <p className="ml-5">59510, HEM</p>
           </div>
         </div>
 
-        <div className="flex border-b-2 dark:border-zinc-600 py-2.5 ml-5">
+        <div className="flex border-b-2 dark:border-zinc-600 ml-5">
           <a href="mailto:schmieder.aurelien@gmail.com">
             <button
               className="bg-white dark:bg-black m-1 rounded-lg p-1 hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors duration-600"
@@ -180,11 +183,13 @@ const PersonalInfo: React.FC = () => {
               </svg>
             </button>
           </a>
-          <div>
+          <div className="w-full box-border overflow-hidden max-w-full break-words">
             <p className="text-sm ml-5">
-              <em>Email:</em>
+              <em>{t("personnalInfo.Email")}</em>
             </p>
-            <p className="ml-5">schmieder.aurelien@gmail.com</p>
+            <p className="whitespace-pre-wrap-sm ml-5">
+              schmieder.aurelien@gmail.com
+            </p>
           </div>
         </div>
 
@@ -219,7 +224,7 @@ const PersonalInfo: React.FC = () => {
           </a>
           <div>
             <p className="text-sm ml-5">
-              <em>Téléphone:</em>
+              <em>{t("personnalInfo.Phone")}</em>
             </p>
             <p className="ml-5">07 81 65 00 03</p>
           </div>

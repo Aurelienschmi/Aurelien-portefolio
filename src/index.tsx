@@ -25,9 +25,7 @@ i18next.init({
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-const onClose = () => {
-  console.log("Close button clicked");
-};
+
 
 root.render(
   <div>
