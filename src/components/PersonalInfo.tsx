@@ -252,7 +252,7 @@ const PersonalInfo: React.FC = () => {
               fill="currentColor"
             />
           </svg>
-          <p>Télécharger mon CV</p>
+          <p>{t("personnalInfo.Cv")}</p>
         </div>
       </button>
     </div>

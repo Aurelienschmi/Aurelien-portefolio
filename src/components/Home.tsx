@@ -150,7 +150,7 @@ const Home = () => {
                 <img
                   src="/images/CCNAv7.png"
                   alt="Certification of CCNAv7"
-                  className="h-40 border-2 border-blue-500 dark:border-blue-300 transition-transform duration-300 transform hover:scale-105"
+                  className="h-40 border-2 border-blue-500 dark:border-blue-300 transition-transform duration-300 transform hover:scale-105  m-2"
                 />
               </button>
               <button
@@ -159,7 +159,7 @@ const Home = () => {
                 <img
                   src="/images/Introduction-to-iot.png"
                   alt="Certification of Introduction-to-iot"
-                  className="h-40 border-2 border-blue-500 dark:border-blue-300 transition-transform duration-300 transform hover:scale-105"
+                  className="h-40 border-2 border-blue-500 dark:border-blue-300 transition-transform duration-300 transform hover:scale-105  m-2"
                 />
               </button>
             </div>
@@ -185,7 +185,7 @@ const Home = () => {
                   {t("home.Education")}
                 </h3>
               </div>
-                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-full 2xl:w-auto h-auto flex flex-col items-start m-5">
+                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
                   <div className="p-2 text-zinc-600 dark:text-zinc-400">
                     <p className="text-sm">{t("home.EnigmaYear")}</p>
                     <div className="flex flex-nowrap items-center ">
@@ -199,7 +199,7 @@ const Home = () => {
                     <p> {t("home.EnigmaPosition")}</p>
                   </div>
               </div>
-                <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-full 2xl:w-auto h-auto flex flex-col items-start m-5">
+                <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
                   <div className="p-2 text-zinc-600 dark:text-zinc-400">
                     <p className="text-sm">{t("home.StapsYear")}</p>
                     <div className="flex flex-nowrap items-center ">
@@ -214,7 +214,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-full 2xl:w-auto h-auto flex flex-col items-start m-5">
+                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
                   <div className="p-2 text-zinc-600 dark:text-zinc-400">
                     <p className="text-sm">{t("home.LyceeYear")}</p>
                     <div className="flex flex-nowrap items-center ">

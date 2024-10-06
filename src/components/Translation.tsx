@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const TranslationButton = () => {
   const [, i18n] = useTranslation("global");
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
+  const [language, setLanguage] = useState("fr");
+
+  const handleChangeLanguage = () => {
+    const newLang = language === "fr" ? "en" : "fr";
+    setLanguage(newLang);
+    i18n.changeLanguage(newLang);
   };
+
   return (
     <div>
-      <label className="relative inline-flex items-center cursor-pointer">
-        <input 
-          className="sr-only peer" 
-          value="" 
-          type="checkbox" 
-          onClick={() => handleChangeLanguage(i18n.language === "fr" ? "en" : "fr")} 
-        />
-        <div className="w-24 h-12 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['FR'] before:absolute before:h-10 before:w-10 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-0 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['EN'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-10 after:h-10 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0"></div>
-      </label>
+      <button
+        onClick={handleChangeLanguage}
+        className="w-8 h-8 rounded-full transition-transform duration-500 transform hover:scale-110 shadow-lg border-2 border-gray-400 dark:border-gray-200"
+        style={{
+          backgroundImage: `url(/images/${language === "fr" ? "fr-flag.png" : "uk-flag.png"})`,
+          backgroundSize: '140%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      ></button>
     </div>
   );
 };
+
 export default TranslationButton;

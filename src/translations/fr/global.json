@@ -9,7 +9,8 @@
         "Age": "Âge",
         "Localisation": "Localisation ",
         "Email": "Email",
-        "Phone": "Téléphone"
+        "Phone": "Téléphone",
+        "Cv":"Télécharger mon CV"
     },
     "home": {
         "About": "Biographie",

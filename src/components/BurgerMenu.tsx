@@ -34,67 +34,62 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
-        className="flex flex-col items-center justify-between w-8 h-8 focus:outline-none absolute top-4 right-4"
+        className="flex flex-col items-center justify-between w-10 h-10 focus:outline-none absolute top-3 right-4 bg-blue-500 p-3 rounded-full"
         onClick={toggleMenu}
       >
         <span
-          className={`block h-1 w-full bg-black transition-transform duration-300 ease-in-out transform ${
-            isOpen ? "rotate-45 translate-y-3.5" : ""
+          className={`block h-1 w-6 bg-white transition-transform duration-300 ease-in-out transform ${
+        isOpen ? "rotate-45 translate-y-1.5" : ""
+          }`}
+        />
+        <span
+          className={`block h-1 w-6 bg-white transition-opacity duration-300 ease-in-out ${
+        isOpen ? "opacity-0" : ""
           }`}
         ></span>
         <span
-          className={`block h-1 w-full bg-black transition-opacity duration-300 ease-in-out ${
-            isOpen ? "opacity-0" : ""
-          }`}
-        ></span>
-        <span
-          className={`block h-1 w-full bg-black transition-transform duration-300 ease-in-out transform ${
-            isOpen ? "-rotate-45 -translate-y-3.5" : ""
+          className={`block h-1 w-6 bg-white transition-transform duration-300 ease-in-out transform ${
+        isOpen ? "-rotate-45 -translate-y-1.5" : ""
           }`}
         ></span>
       </button>
       {isOpen && (
-        <div className="p-5 text-dark dark:text-gray-500">
-          <ul className="p-5 text-dark dark:text-gray-500">
-            <div>
-              <div>
-                <button
-                  className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-col justify-center items-center ${
-                    about
-                      ? "bg-blue-500 text-white dark:bg-blue-500 dark:text-white"
-                      : "bg-slate-200 hover:bg-blue-500 hover:text-white dark:bg-zinc-800 dark:hover:bg-blue-500 dark:hover:text-white"
-                  } transition-colors duration-300`}
-                  onClick={() => {
-                    setAbout(true);
-                    setResume(false);
-                    setWorks(false);
-                    setContact(false);
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    viewBox="0 0 100 100"
-                    className="fill-current h-10 w-10"
-                  >
-                    <g>
-                      <path d="m50 44.809c-15.988 0-29 13.129-29 29.281 0 3.0117 1.6719 7.2188 9.6484 10.191 5.1289 1.9102 12 2.9609 19.352 2.9609 14.43 0 29-4.0703 29-13.148 0-16.152-13.012-29.285-29-29.285zm0 38.93c-14.539 0-25.512-4.1484-25.512-9.6602 0-14.207 11.441-25.777 25.512-25.777s25.512 11.57 25.512 25.789c0 5.5-10.973 9.6484-25.512 9.6484z" />
-                      <path d="m50 42.211c8.1211 0 14.719-6.6016 14.719-14.719 0-8.1211-6.5977-14.723-14.719-14.723s-14.719 6.6094-14.719 14.719c0 8.1133 6.5977 14.723 14.719 14.723zm0-25.949c6.1914 0 11.23 5.0391 11.23 11.23 0 6.1875-5.0391 11.227-11.23 11.227s-11.23-5.0391-11.23-11.23c0-6.1875 5.0391-11.227 11.23-11.227z" />
-                    </g>
-                  </svg>
+        <div
+          className={`absolute top-20 right-0 p-4 text-dark dark:text-gray-500 bg-white dark:bg-black rounded-2xl`}
+        >
+          <ul>
+            <button
+              className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                works ? "text-blue-500" : "hover:text-blue-500 "
+              } transition-colors duration-300`}
+              onClick={() => {
+                setAbout(true);
+                setResume(false);
+                setWorks(false);
+                setContact(false);
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                viewBox="0 0 100 100"
+                className="fill-current h-10 w-10"
+              >
+                <g>
+                  <path d="m50 44.809c-15.988 0-29 13.129-29 29.281 0 3.0117 1.6719 7.2188 9.6484 10.191 5.1289 1.9102 12 2.9609 19.352 2.9609 14.43 0 29-4.0703 29-13.148 0-16.152-13.012-29.285-29-29.285zm0 38.93c-14.539 0-25.512-4.1484-25.512-9.6602 0-14.207 11.441-25.777 25.512-25.777s25.512 11.57 25.512 25.789c0 5.5-10.973 9.6484-25.512 9.6484z" />
+                  <path d="m50 42.211c8.1211 0 14.719-6.6016 14.719-14.719 0-8.1211-6.5977-14.723-14.719-14.723s-14.719 6.6094-14.719 14.719c0 8.1133 6.5977 14.723 14.719 14.723zm0-25.949c6.1914 0 11.23 5.0391 11.23 11.23 0 6.1875-5.0391 11.227-11.23 11.227s-11.23-5.0391-11.23-11.23c0-6.1875 5.0391-11.227 11.23-11.227z" />
+                </g>
+              </svg>
 
-                  <li className="list-none">{t("header.About")}</li>
-                </button>
-              </div>
-            </div>
+              <li className="list-none">{t("header.About")}</li>
+            </button>
+
             <div>
               <button
-                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-col justify-center items-center ${
-                  resume
-                    ? "bg-blue-500 text-white dark:bg-blue-500 dark:text-white"
-                    : "bg-slate-200 hover:bg-blue-500 hover:text-white dark:bg-zinc-800 dark:hover:bg-blue-500 dark:hover:text-white"
+                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                  resume ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
                 onClick={() => {
                   setAbout(false);
@@ -107,7 +102,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   version="1.1"
                   viewBox="0 0 100 100"
-                  className="fill-current h-10 w-10 mb-1"
+                  className="fill-current h-10 w-10"
                   stroke="currentColor"
                   strokeWidth="1"
                 >
@@ -118,10 +113,8 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
             </div>
             <div>
               <button
-                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-col justify-center items-center ${
-                  works
-                    ? "bg-blue-500 text-white dark:bg-blue-500 dark:text-white"
-                    : "bg-slate-200 hover:bg-blue-500 hover:text-white dark:bg-zinc-800 dark:hover:bg-blue-500 dark:hover:text-white"
+                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                  works ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
                 onClick={() => {
                   setAbout(false);
@@ -148,10 +141,8 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
             </div>
             <div>
               <button
-                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-col justify-center items-center ${
-                  contact
-                    ? "bg-blue-500 text-white dark:bg-blue-500 dark:text-white"
-                    : "bg-slate-200 hover:bg-blue-500 hover:text-white dark:bg-zinc-800 dark:hover:bg-blue-500 dark:hover:text-white"
+                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                  contact ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
                 onClick={() => {
                   setAbout(false);
