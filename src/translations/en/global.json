@@ -69,6 +69,18 @@
         "FamifloraContent": "Retail Employee",
         "FamifloraPosition": "Mouscron, Belgium",
         "FamifloraStatus": "- Employee"
+        
+
+    },
+    "form": {
+        "Contact": "Contact",
+        "FirstName": "FirstName",
+        "LastName": "LastName",
+        "Email": "Email",
+        "Message": "Message",
+        "Send": "Send",
+        "charactersRemaining": "Characters Remaining"
+
     },
     "popUp": {
         "Close": "Close"

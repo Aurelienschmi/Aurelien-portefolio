@@ -4,12 +4,43 @@ import { AppContext } from "../context/AppContext.tsx";
 import Popup from "./Popup.tsx";
 import ProgressBar from "./ProgressBar.tsx";
 import UnderConstruction from "./UnderConstruction.tsx";
+import emailjs from "emailjs-com";
 
 const Home = () => {
   const { t } = useTranslation("global");
   const context = useContext(AppContext);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const maxLength = 600;
 
+  emailjs.init("VnAA49bGpgisOsAQ0");
+
+  const sendMail = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const mail = {
+      firstName: (document.getElementById("firstName") as HTMLInputElement).value,
+      name: (document.getElementById("lastName") as HTMLInputElement).value,
+      email: (document.getElementById("email") as HTMLInputElement).value,
+      message: (document.getElementById("message") as HTMLInputElement).value,
+    };
+
+    console.log(mail);
+
+    emailjs.send("service_1natpxa", "template_p0dhgun", mail)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+      });
+  };
+
+  const handleMessageChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setMessage(event.target.value);
+  };
   useEffect(() => {
     if (isPopupOpen) {
       document.body.style.overflow = "hidden";
@@ -185,49 +216,49 @@ const Home = () => {
                   {t("home.Education")}
                 </h3>
               </div>
-                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
-                  <div className="p-2 text-zinc-600 dark:text-zinc-400">
-                    <p className="text-sm">{t("home.EnigmaYear")}</p>
-                    <div className="flex flex-nowrap items-center ">
-                      <h4 className="text-lg font-semibold text-black dark:text-white">
-                        {t("home.Enigma")}
-                      </h4>
-                      <p>{t("home.EnigmaStatus")}</p>
-                    </div>
-
-                    <p>{t("home.EnigmaContent")}</p>
-                    <p> {t("home.EnigmaPosition")}</p>
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.EnigmaYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Enigma")}
+                    </h4>
+                    <p>{t("home.EnigmaStatus")}</p>
                   </div>
+
+                  <p>{t("home.EnigmaContent")}</p>
+                  <p> {t("home.EnigmaPosition")}</p>
+                </div>
               </div>
-                <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
-                  <div className="p-2 text-zinc-600 dark:text-zinc-400">
-                    <p className="text-sm">{t("home.StapsYear")}</p>
-                    <div className="flex flex-nowrap items-center ">
-                      <h4 className="text-lg font-semibold text-black dark:text-white">
-                        {t("home.Staps")}
-                      </h4>
-                      <p>{t("home.StapsStatus")}</p>
-                    </div>
-
-                    <p>{t("home.StapsContent")}</p>
-                    <p> {t("home.StapsPosition")}</p>
+              <div className="bg-blue-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.StapsYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Staps")}
+                    </h4>
+                    <p>{t("home.StapsStatus")}</p>
                   </div>
+
+                  <p>{t("home.StapsContent")}</p>
+                  <p> {t("home.StapsPosition")}</p>
                 </div>
+              </div>
 
-                <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
-                  <div className="p-2 text-zinc-600 dark:text-zinc-400">
-                    <p className="text-sm">{t("home.LyceeYear")}</p>
-                    <div className="flex flex-nowrap items-center ">
-                      <h4 className="text-lg font-semibold text-black dark:text-white">
-                        {t("home.Lycee")}
-                      </h4>
-                      <p>{t("home.LyceeStatus")}</p>
-                    </div>
-
-                    <p>{t("home.LyceeContent")}</p>
-                    <p> {t("home.LyceePosition")}</p>
+              <div className="bg-pink-50 dark:bg-black border border-white rounded-3xl p-2 w-auto h-auto flex flex-col items-start m-5">
+                <div className="p-2 text-zinc-600 dark:text-zinc-400">
+                  <p className="text-sm">{t("home.LyceeYear")}</p>
+                  <div className="flex flex-nowrap items-center ">
+                    <h4 className="text-lg font-semibold text-black dark:text-white">
+                      {t("home.Lycee")}
+                    </h4>
+                    <p>{t("home.LyceeStatus")}</p>
                   </div>
+
+                  <p>{t("home.LyceeContent")}</p>
+                  <p> {t("home.LyceePosition")}</p>
                 </div>
+              </div>
 
               <div className="mt-8 flex flex-nowrap items-center">
                 <img
@@ -361,7 +392,70 @@ const Home = () => {
       )}
       {contact && (
         <>
-          <UnderConstruction />
+          <div className="space-y-6 mx-6">
+            <div className="flex items-center space-x-8 mt-8">
+              <h2 className="text-4xl font-bold">{t("form.Contact")}</h2>
+              <div className="w-40 border-t-4 border-blue-500 rounded-3xl"></div>
+            </div>
+            <form className="space-y-4" onSubmit={sendMail}>
+              <div className="flex flex-col">
+                <label htmlFor="firstName" className="text-lg font-semibold">
+                  {t("form.FirstName")}
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="lastName" className="text-lg font-semibold">
+                  {t("form.LastName")}
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email" className="text-lg font-semibold">
+                  {t("form.Email")}
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message" className="text-lg font-semibold">
+                  {t("form.Message")}
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  maxLength={maxLength}
+                  value={message}
+                  onChange={handleMessageChange}
+                  className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white resize-none h-40"
+                ></textarea>
+                <div className="text-right text-sm text-gray-500 dark:text-gray-400">
+                  {maxLength - message.length} {t("form.charactersRemaining")}
+                </div>
+              </div>
+              <button
+                type="submit"
+                className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800"
+              >
+                {t("form.Send")}
+              </button>
+            </form>
+          </div>
         </>
       )}
     </div>

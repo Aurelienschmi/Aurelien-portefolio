@@ -61,7 +61,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
         >
           <ul>
             <button
-              className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+              className={`m-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
                 works ? "text-blue-500" : "hover:text-blue-500 "
               } transition-colors duration-300`}
               onClick={() => {
@@ -88,7 +88,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
 
             <div>
               <button
-                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                className={`m-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
                   resume ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
                 onClick={() => {
@@ -113,7 +113,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
             </div>
             <div>
               <button
-                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                className={`m-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
                   works ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
                 onClick={() => {
@@ -141,7 +141,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
             </div>
             <div>
               <button
-                className={`m-2 mb-6 p-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
+                className={`m-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
                   contact ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
                 onClick={() => {

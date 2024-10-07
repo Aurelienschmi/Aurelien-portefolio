@@ -70,6 +70,15 @@
         "FamifloraPosition": "Mouscron, Belgique",
         "FamifloraStatus": "- Employé"
     },
+    "form": {
+        "Contact": "Contact",
+        "FirstName": "Prénom",
+        "LastName": "Nom",
+        "Email": "Email",
+        "Message": "Message",
+        "Send": "Envoyer",
+        "charactersRemaining": "Caractères restants"
+    },
     "popUp": {
         "Close": "Fermer"
     }

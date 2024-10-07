@@ -5,6 +5,7 @@ import SwitchTheme from "./components/SwitchTheme.tsx";
 import Translation from "./components/Translation.tsx";
 import PersonalInfo from "./components/PersonalInfo.tsx";
 import BurgerMenu from "./components/BurgerMenu.tsx";
+import HeaderPhone from "./components/HeaderPhone.tsx";
 import { AppProvider } from "./context/AppContext.tsx";
 
 const App = () => {
@@ -34,8 +35,8 @@ const App = () => {
     };
 
     preloadImages([
-      '/images/background_dark.jpg',
-      '/images/background_light.jpg',
+      "/images/background_dark.jpg",
+      "/images/background_light.jpg",
     ]);
   }, []);
 
@@ -65,7 +66,7 @@ const App = () => {
         <div className="lg:sticky top-16 bg-white dark:bg-black rounded-3xl p-6 mt-56 w-5/6 lg:w-1/3 lg:mx-5">
           <PersonalInfo />
         </div>
-        <div className="2xl:hidden absolute top-5 right-5 m-4 flex space-x-4">
+        <div className="hidden sm:block 2xl:hidden absolute top-5 right-5 m-4 flex space-x-4">
           <BurgerMenu
             about={about}
             resume={resume}
@@ -73,11 +74,19 @@ const App = () => {
             contact={contact}
           />
         </div>
-        <div className="flex flex-col w-5/6 p-5 m-5 bg-white dark:bg-black rounded-3xl lg:mt-40 box-border">
+        <div className="flex flex-col w-5/6 p-5 m-5 mb-20 bg-white dark:bg-black rounded-3xl lg:mt-40 box-border">
           <Home about={about} resume={resume} works={works} contact={contact} />
         </div>
         <div className="sticky top-16 bg-white dark:bg-black rounded-3xl p-4 mt-56 hidden 2xl:block mx-5">
           <Header
+            about={about}
+            resume={resume}
+            works={works}
+            contact={contact}
+          />
+        </div>
+        <div className="fixed bottom-0 left-0 right-0 block sm:hidden">
+          <HeaderPhone
             about={about}
             resume={resume}
             works={works}
