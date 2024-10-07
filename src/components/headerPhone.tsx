@@ -1,6 +1,8 @@
 import React, {  useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { AppContext } from "../context/AppContext.tsx";
+import { Analytics } from '@vercel/analytics/react';
+
 
 interface headerPhoneProps {
   setAbout: (value: boolean) => void;
@@ -135,6 +137,7 @@ const HeaderPhone: React.FC<headerPhoneProps> = () => {
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-max px-2 py-1 text-white bg-black rounded-md opacity-0 transform scale-50 transition-all duration-500 group-hover:opacity-100 group-hover:scale-100">
           <p>{t("header.Contact")}</p>
         </div>
+        <Analytics />
       </div>
     </div>
   );

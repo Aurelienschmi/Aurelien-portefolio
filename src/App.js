@@ -5,7 +5,7 @@ import SwitchTheme from "./components/SwitchTheme.tsx";
 import Translation from "./components/Translation.tsx";
 import PersonalInfo from "./components/PersonalInfo.tsx";
 import BurgerMenu from "./components/BurgerMenu.tsx";
-import HeaderPhone from "./components/HeaderPhone.tsx";
+import HeaderPhone from "./components/headerPhone.tsx";
 import { AppProvider } from "./context/AppContext.tsx";
 
 const App = () => {
