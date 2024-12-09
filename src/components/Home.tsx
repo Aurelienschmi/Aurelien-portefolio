@@ -12,29 +12,34 @@ const Home = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [message, setMessage] = useState("");
   const maxLength = 600;
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
 
   emailjs.init("VnAA49bGpgisOsAQ0");
 
   const sendMail = (event: React.FormEvent<HTMLFormElement>) => {
+    if (email !== "") {
+      return;
+    }
     event.preventDefault();
 
     const mail = {
-      firstName: (document.getElementById("firstName") as HTMLInputElement).value,
+      firstName: (document.getElementById("firstName") as HTMLInputElement)
+        .value,
       name: (document.getElementById("lastName") as HTMLInputElement).value,
       email: (document.getElementById("email") as HTMLInputElement).value,
       message: (document.getElementById("message") as HTMLInputElement).value,
     };
-
-    console.log(mail);
-
-    emailjs.send("service_1natpxa", "template_p0dhgun", mail)
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      })
-      .catch((err) => {
-        console.error("FAILED...", err);
-      });
   };
+
+  if (isSubmitted === true) {
+    if (email === "") {
+      alert("Veuillez remplir le champ email !");
+    } else {
+      alert("Formulaire envoyé avec succès");
+      window.location.reload();
+    }
+  }
 
   const handleMessageChange = (
     event: React.ChangeEvent<HTMLTextAreaElement>
@@ -52,6 +57,10 @@ const Home = () => {
       document.body.style.overflow = "auto";
     };
   }, [isPopupOpen]);
+
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -157,16 +166,16 @@ const Home = () => {
                 </div>
 
                 <div className="bg-pink-50 dark:bg-black border dark:border-white rounded-3xl p-2 w-auto h-auto flex justify-start m-2">
-                  <img
+                <img
                     src="/images/sports.svg"
                     alt="Sports icon"
                     className="h-20"
                   />
                   <div className="flex flex-col m-5">
                     <h4 className="text-lg font-semibold pb-2">
-                      {t("home.Development")}
+                      {t("home.Sport")}
                     </h4>
-                    <p className="">{t("home.DevelopmentContent")}</p>
+                    <p className="">{t("home.SportContent")}</p>
                   </div>
                 </div>
               </div>
@@ -185,7 +194,9 @@ const Home = () => {
                 />
               </button>
               <button
-                onClick={() => window.open("/images/CCNAv7.png", "_blank")}
+                onClick={() =>
+                  window.open("/images/Introduction-to-iot.png", "_blank")
+                }
               >
                 <img
                   src="/images/Introduction-to-iot.png"
@@ -407,6 +418,7 @@ const Home = () => {
                   id="firstName"
                   name="firstName"
                   className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white"
+                  placeholder="John"
                 />
               </div>
               <div className="flex flex-col">
@@ -418,17 +430,20 @@ const Home = () => {
                   id="lastName"
                   name="lastName"
                   className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white"
+                  placeholder="WICK"
                 />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="email" className="text-lg font-semibold">
-                  {t("form.Email")}
+                  {t("form.Email")} <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  value={email}
+                  onChange={handleEmailChange}
                   className="p-2 border border-gray-300 rounded-lg dark:bg-black dark:border-white dark:text-white"
+                  placeholder="john.wick@exemple.com"
                 />
               </div>
               <div className="flex flex-col">
@@ -451,6 +466,7 @@ const Home = () => {
               <button
                 type="submit"
                 className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800"
+                onClick={() => setIsSubmitted(true)}
               >
                 {t("form.Send")}
               </button>
