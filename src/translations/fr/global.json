@@ -68,7 +68,17 @@
         "FamifloraYear": "05/2023 - 06/2023",
         "FamifloraContent": "Employé de libre service",
         "FamifloraPosition": "Mouscron, Belgique",
-        "FamifloraStatus": "- Employé"
+        "FamifloraStatus": "- Employé",
+        "Projects": "Projets",
+        "ViewProject": "Voir le projet",
+        "Project1Title": "Blog sur les Réseaux",
+        "Project1Description": "Création d'un blog dédié aux réseaux informatiques, comprenant des articles sur les protocoles, les équipements et les technologies.",
+        "Project2Title": "CRUD en PHP",
+        "Project2Description": "Développement d'une application CRUD en PHP, avec une base de données MySQL, pour gérer une liste d'utilisateurs.",
+        "Project3Title": "CRM avec Next.js",
+        "Project3Description": "Développement d'une application CRM en Next.js, intégrant une base de données MySQL, avec installation sur un serveur OVH pour gérer les données clients dans le cadre de mon stage.",
+        "Project4Title": "Casse-Brique",
+        "Project4Description": "Développement d'un jeu de casse-briques en C, utilisant la bibliothèque SDL, dans le cadre d'un projet scolaire."
     },
     "form": {
         "Contact": "Contact",

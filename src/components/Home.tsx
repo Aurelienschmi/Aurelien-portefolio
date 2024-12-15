@@ -397,7 +397,29 @@ const Home = () => {
       {works && (
         <>
           <div>
-            <UnderConstruction />
+        <div className="space-y-6">
+          <div className="flex items-center space-x-8 mt-8">
+            <h2 className="text-4xl font-bold ml-6">{t("home.Projects")}</h2>
+            <div className="w-40 border-t-4 border-blue-500 rounded-3xl"></div>
+          </div>
+          <div className="flex flex-wrap justify-around">
+            {context.projects.map((project, index) => (
+          <div key={index} className="bg-white dark:bg-black border dark:border-white rounded-3xl p-4 m-4 w-80">
+            <img src={project.image} alt={project.title} className="h-40 w-full object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+              <button
+            onClick={() => window.open(project.link, "_blank")}
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800"
+              >
+            {t("home.ViewProject")}
+              </button>
+            </div>
+          </div>
+            ))}
+          </div>
+        </div>
           </div>
         </>
       )}

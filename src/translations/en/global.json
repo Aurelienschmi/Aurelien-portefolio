@@ -68,7 +68,19 @@
         "FamifloraYear": "05/2023 - 06/2023",
         "FamifloraContent": "Retail Employee",
         "FamifloraPosition": "Mouscron, Belgium",
-        "FamifloraStatus": "- Employee"
+        "FamifloraStatus": "- Employee",
+        "Projects": "Projects",
+        "ViewProject": "View project",
+        "Project1Title": "Network Blog",
+        "Project1Description": "Creation of a blog dedicated to computer networks, featuring articles on protocols, equipment, and technologies.",
+        "Project2Title": "PHP CRUD Application",
+        "Project2Description": "Development of a CRUD application in PHP with a MySQL database to manage a user list.",
+        "Project3Title": "CRM with Next.js",
+        "Project3Description": "Development of a CRM application using Next.js, integrated with a MySQL database and deployed on an OVH server to manage customer data during my internship.",
+        "Project4Title": "Brick Breaker",
+        "Project4Description": "Development of a brick breaker game in C using the SDL library, as part of a school project."
+
+
         
 
     },

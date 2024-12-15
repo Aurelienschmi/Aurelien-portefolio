@@ -1,6 +1,14 @@
-import React, { createContext, useState, ReactNode } from 'react';
+import React, { createContext, useState, useEffect, ReactNode, useMemo } from 'react';
+import { useTranslation } from "react-i18next";
 
-interface AppContextProps {
+interface Project {
+  image: string;
+  title: string;
+  description: string;
+  link: string;
+}
+
+export interface AppContextProps {
   about: boolean;
   resume: boolean;
   works: boolean;
@@ -9,19 +17,56 @@ interface AppContextProps {
   setResume: (value: boolean) => void;
   setWorks: (value: boolean) => void;
   setContact: (value: boolean) => void;
+  projects: Project[];
 }
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 
+const initialProjects: Project[] = [
+  {
+    image: "/images/project-blog.png",
+    title: "home.Project1Title",
+    description: "home.Project1Description",
+    link: "https://aurelienschmi.github.io/Blog-Network/",
+  },
+  {
+    image: "/images/project-php.png",
+    title: "home.Project2Title",
+    description: "home.Project2Description",
+    link: "https://github.com/Aurelienschmi/CRUD-php",
+  },
+  {
+    image: "/images/project-CRM.jpeg",
+    title: "home.Project3Title",
+    description: "home.Project3Description",
+    link: "https://github.com/Sterbenfr/CRM",
+  },
+  {
+    image: "/images/project-BrickBreacker.jpeg",
+    title: "home.Project4Title",
+    description: "home.Project4Description",
+    link: "https://github.com/Aurelienschmi/Brick-breaker",
+  },
+];
+
 const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const { t, i18n } = useTranslation("global");
   const [about, setAbout] = useState(true);
   const [resume, setResume] = useState(false);
   const [works, setWorks] = useState(false);
   const [contact, setContact] = useState(false);
 
+  const projects = useMemo(() => {
+    return initialProjects.map(project => ({
+      ...project,
+      title: t(project.title),
+      description: t(project.description),
+    }));
+  }, [i18n.language, t]);
+
   return (
     <AppContext.Provider
-      value={{ about, resume, works, contact, setAbout, setResume, setWorks, setContact }}
+      value={{ about, resume, works, contact, setAbout, setResume, setWorks, setContact, projects }}
     >
       {children}
     </AppContext.Provider>
