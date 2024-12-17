@@ -409,12 +409,12 @@ const Home = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold">{project.title}</h3>
               <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
-              <button
-            onClick={() => window.open(project.link, "_blank")}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800"
-              >
-            {t("home.ViewProject")}
-              </button>
+                <button
+                onClick={() => window.open(project.link, "_blank")}
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-800"
+                >
+                {project.isGithub ? t("home.ViewOnGithub") : t("home.ViewProject")}
+                </button>
             </div>
           </div>
             ))}

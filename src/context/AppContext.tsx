@@ -6,6 +6,7 @@ interface Project {
   title: string;
   description: string;
   link: string;
+  isGithub: boolean; // Add this line
 }
 
 export interface AppContextProps {
@@ -27,25 +28,36 @@ const initialProjects: Project[] = [
     image: "/images/project-blog.png",
     title: "home.Project1Title",
     description: "home.Project1Description",
+    link: "https://github.com/Aurelienschmi/Blog-Network",
+    isGithub: true,
+  },
+  {
+    image: "/images/project-blog.png",
+    title: "home.Project1Title",
+    description: "home.Project1Description",
     link: "https://aurelienschmi.github.io/Blog-Network/",
+    isGithub: false,
   },
   {
     image: "/images/project-php.png",
     title: "home.Project2Title",
     description: "home.Project2Description",
     link: "https://github.com/Aurelienschmi/CRUD-php",
+    isGithub: true,
   },
   {
     image: "/images/project-CRM.jpeg",
     title: "home.Project3Title",
     description: "home.Project3Description",
     link: "https://github.com/Sterbenfr/CRM",
+    isGithub: true
   },
   {
     image: "/images/project-BrickBreacker.jpeg",
     title: "home.Project4Title",
     description: "home.Project4Description",
     link: "https://github.com/Aurelienschmi/Brick-breaker",
+    isGithub: true,
   },
 ];
 

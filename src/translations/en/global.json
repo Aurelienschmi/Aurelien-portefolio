@@ -71,6 +71,7 @@
         "FamifloraStatus": "- Employee",
         "Projects": "Projects",
         "ViewProject": "View project",
+        "ViewOnGithub": "View on Github",
         "Project1Title": "Network Blog",
         "Project1Description": "Creation of a blog dedicated to computer networks, featuring articles on protocols, equipment, and technologies.",
         "Project2Title": "PHP CRUD Application",
