@@ -28,13 +28,6 @@ const initialProjects: Project[] = [
     image: "/images/project-blog.png",
     title: "home.Project1Title",
     description: "home.Project1Description",
-    link: "https://github.com/Aurelienschmi/Blog-Network",
-    isGithub: true,
-  },
-  {
-    image: "/images/project-blog.png",
-    title: "home.Project1Title",
-    description: "home.Project1Description",
     link: "https://aurelienschmi.github.io/Blog-Network/",
     isGithub: false,
   },
