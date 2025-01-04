@@ -79,7 +79,9 @@
         "Project3Title": "CRM with Next.js",
         "Project3Description": "Development of a CRM application using Next.js, integrated with a MySQL database and deployed on an OVH server to manage customer data during my internship.",
         "Project4Title": "Brick Breaker",
-        "Project4Description": "Development of a brick breaker game in C using the SDL library, as part of a school project."
+        "Project4Description": "Development of a brick breaker game in C using the SDL library, as part of a school project.",
+        "Project5Title": "Scraping Apartments",
+        "Project5Description": "An automated real estate listing scraping project, with data management through Supabase and dynamic display on a Next.js website."
 
 
         

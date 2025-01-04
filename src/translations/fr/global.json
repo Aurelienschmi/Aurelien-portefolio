@@ -79,7 +79,9 @@
         "Project3Title": "CRM avec Next.js",
         "Project3Description": "Développement d'une application CRM en Next.js, intégrant une base de données MySQL, avec installation sur un serveur OVH pour gérer les données clients dans le cadre de mon stage.",
         "Project4Title": "Casse-Brique",
-        "Project4Description": "Développement d'un jeu de casse-briques en C, utilisant la bibliothèque SDL, dans le cadre d'un projet scolaire."
+        "Project4Description": "Développement d'un jeu de casse-briques en C, utilisant la bibliothèque SDL, dans le cadre d'un projet scolaire.",
+        "Project5Title": "Scraping Appartements",
+        "Project5Description": "Un projet de scrapping automatisé d'annonces immobilières, avec gestion des données via Supabase et affichage dynamique sur un site Next.js"
     },
     "form": {
         "Contact": "Contact",
