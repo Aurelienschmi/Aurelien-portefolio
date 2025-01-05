@@ -62,13 +62,14 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
           <ul>
             <button
               className={`m-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
-                works ? "text-blue-500" : "hover:text-blue-500 "
+                about ? "text-blue-500" : "hover:text-blue-500 "
               } transition-colors duration-300`}
               onClick={() => {
                 setAbout(true);
                 setResume(false);
                 setWorks(false);
                 setContact(false);
+                toggleMenu();
               }}
             >
               <svg
@@ -96,6 +97,8 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
                   setResume(true);
                   setWorks(false);
                   setContact(false);
+                  toggleMenu();
+
                 }}
               >
                 <svg
@@ -112,7 +115,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
               </button>
             </div>
             <div>
-              <button
+            <button
                 className={`m-2 w-20 h-20 rounded-2xl flex flex-row justify-center items-center ${
                   works ? "text-blue-500" : "hover:text-blue-500 "
                 } transition-colors duration-300`}
@@ -121,6 +124,8 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
                   setResume(false);
                   setWorks(true);
                   setContact(false);
+                  toggleMenu();
+
                 }}
               >
                 <svg
@@ -149,6 +154,8 @@ const BurgerMenu: React.FC<BurgerMenuProps> = () => {
                   setResume(false);
                   setWorks(false);
                   setContact(true);
+                  toggleMenu();
+
                 }}
               >
                 <svg
