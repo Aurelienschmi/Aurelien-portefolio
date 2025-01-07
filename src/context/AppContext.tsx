@@ -44,6 +44,13 @@ const initialProjects: Project[] = [
     isGithub: true,
   },
   {
+    image: "/images/project-tours.png",
+    title: "home.Project6Title",
+    description: "home.Project6Description",
+    link: "https://tours-project-six.vercel.app/",
+    isGithub: false,
+  },
+  {
     image: "/images/project-CRM.jpeg",
     title: "home.Project3Title",
     description: "home.Project3Description",

@@ -1,9 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { AppContext } from "../context/AppContext.tsx";
-import Popup from "./Popup.tsx";
 import ProgressBar from "./ProgressBar.tsx";
-import UnderConstruction from "./UnderConstruction.tsx";
 import emailjs from "emailjs-com";
 
 const Home = () => {

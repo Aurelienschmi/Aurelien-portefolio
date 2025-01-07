@@ -81,7 +81,9 @@
         "Project4Title": "Casse-Brique",
         "Project4Description": "Développement d'un jeu de casse-briques en C, utilisant la bibliothèque SDL, dans le cadre d'un projet scolaire.",
         "Project5Title": "Scraping Appartements",
-        "Project5Description": "Un projet de scrapping automatisé d'annonces immobilières, avec gestion des données via Supabase et affichage dynamique sur un site Next.js"
+        "Project5Description": "Un projet de scrapping automatisé d'annonces immobilières, avec gestion des données via Supabase et affichage dynamique sur un site Next.js",
+        "Project6Title": "Application de Voyage",
+        "Project6Description": "Une application React qui récupère et affiche des données de voyage à partir d'une API."
     },
     "form": {
         "Contact": "Contact",

@@ -81,7 +81,9 @@
         "Project4Title": "Brick Breaker",
         "Project4Description": "Development of a brick breaker game in C using the SDL library, as part of a school project.",
         "Project5Title": "Scraping Apartments",
-        "Project5Description": "An automated real estate listing scraping project, with data management through Supabase and dynamic display on a Next.js website."
+        "Project5Description": "An automated real estate listing scraping project, with data management through Supabase and dynamic display on a Next.js website.",
+        "Project6Title": "Travel Application",
+        "Project6Description": "A React application that fetches and displays travel data from an API."
 
 
         
