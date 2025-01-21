@@ -24,16 +24,25 @@ export interface AppContextProps {
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 
 const initialProjects: Project[] = [
-  {image: "/images/project-apartment.png",
-    title: "home.Project5Title",
-    description: "home.Project5Description",
-    link: "https://apartment-scrapping.vercel.app/",
-    isGithub: false,},
   {
     image: "/images/project-blog.png",
     title: "home.Project1Title",
     description: "home.Project1Description",
     link: "https://aurelienschmi.github.io/Blog-Network/",
+    isGithub: false,
+  },
+  {
+    image: "/images/project-apartment.png",
+    title: "home.Project5Title",
+    description: "home.Project5Description",
+    link: "https://apartment-scrapping.vercel.app/",
+    isGithub: false,
+  },
+  {
+    image: "/images/project-Cocktails.png",
+    title: "home.Project7Title",
+    description: "home.Project7Description",
+    link: "https://cocktails-api-react.vercel.app/",
     isGithub: false,
   },
   {

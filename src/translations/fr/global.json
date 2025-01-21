@@ -83,7 +83,9 @@
         "Project5Title": "Scraping Appartements",
         "Project5Description": "Un projet de scrapping automatisé d'annonces immobilières, avec gestion des données via Supabase et affichage dynamique sur un site Next.js",
         "Project6Title": "Application de Voyage",
-        "Project6Description": "Une application React qui récupère et affiche des données de voyage à partir d'une API."
+        "Project6Description": "Une application React qui récupère et affiche des données de voyage à partir d'une API.",
+        "Project7Title": "Application de Cocktails",
+        "Project7Description": "Une application React qui récupère et affiche des données de Cocktails à partir d'une API."
     },
     "form": {
         "Contact": "Contact",

@@ -83,7 +83,9 @@
         "Project5Title": "Scraping Apartments",
         "Project5Description": "An automated real estate listing scraping project, with data management through Supabase and dynamic display on a Next.js website.",
         "Project6Title": "Travel Application",
-        "Project6Description": "A React application that fetches and displays travel data from an API."
+        "Project6Description": "A React application that fetches and displays travel data from an API.",
+        "Project7Title": "Cocktails Application",
+        "Project7Description": "A React application that fetches and displays Cocktails data from an API."
 
 
         
