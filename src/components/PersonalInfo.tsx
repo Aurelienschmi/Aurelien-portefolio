@@ -234,7 +234,7 @@ const PersonalInfo: React.FC = () => {
       <button
         className="bg-blue-500 text-white font-semibold rounded-lg p-2 mt-8 border hover:bg-blue-100 hover:text-black hover:border hover:border-blue-500 transition-all duration-300 dark:border-blue-500 dark:hover:text-white dark:hover:bg-zinc-800"
         onClick={() => {
-          window.open("/images/CV-Aurelien-SCHMIEDER.pdf", "_blank");
+          window.open("/images/cv-aurelien-schmieder.pdf", "_blank");
         }}
       >
         <div className="flex items-center space-x-2">
